@@ -1,0 +1,11 @@
+{
+  "name": "email_user_guide_project",
+  "version": "1.0.0",
+  "description": "TAC-HDSD-01 - Hướng dẫn sử dụng Email V2",
+  "scripts": {
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

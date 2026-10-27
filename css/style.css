@@ -1,0 +1,103 @@
+/* Custom UI Elements styling */
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.webmail-input {
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.webmail-input:focus {
+    border-color: #1f648b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(31, 100, 139, 0.2);
+}
+
+.step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    flex-shrink: 0;
+    background-color: #e53e3e;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ========================================================
+   Security & Anti-Copy Protection
+   ======================================================== */
+*,
+*::before,
+*::after {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+/* Allow normal pointer interactions for buttons, links, and scrolls */
+a,
+button,
+input,
+select,
+textarea {
+    cursor: pointer;
+}
+
+/* Prevent image dragging and ghost selection */
+img {
+    -webkit-user-drag: none !important;
+    user-drag: none !important;
+    -webkit-touch-callout: none !important;
+    pointer-events: auto;
+}
+
+/* Transparent selection highlight fallback */
+::selection {
+    background: transparent;
+    color: inherit;
+}
+
+::-moz-selection {
+    background: transparent;
+    color: inherit;
+}
+
+/* Print Protection: Hide sensitive document content when printing or exporting to PDF */
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+
+    body::before {
+        content: "TÀI LIỆU BẢO MẬT NỘI BỘ - THIÊN ÂN TECHNOLOGY (TAC)\A\A Vui lòng không sao chép, chụp ảnh, in ấn hoặc phát tán tài liệu này dưới mọi hình thức.";
+        white-space: pre-wrap;
+        display: block !important;
+        visibility: visible !important;
+        position: fixed;
+        top: 35%;
+        left: 5%;
+        right: 5%;
+        text-align: center;
+        font-size: 18pt;
+        font-weight: bold;
+        color: #b91c1c;
+        border: 2px dashed #b91c1c;
+        border-radius: 12px;
+        padding: 40px;
+        background: #fff;
+    }
+}

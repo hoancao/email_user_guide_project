@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>TAC-HDSD-02 - Hướng dẫn sử dụng Synology Drive | Thiên Ân Technology</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="../js/tailwind-config.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased" oncontextmenu="return false;"
+    onselectstart="return false;" oncopy="return false;" oncut="return false;" ondragstart="return false;">
+
+    <!-- Top Header Navigation Mobile -->
+    <header id="mobileHeader"
+        class="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 py-2.5 flex items-center justify-between shadow-sm transition-transform duration-300 ease-in-out">
+        <div class="flex items-center space-x-2">
+            <img src="../img/TA_Logo-removebg-preview.png"
+                onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';" alt="Thiên Ân Technology"
+                class="h-8 w-auto object-contain">
+        </div>
+        <button id="mobileMenuBtn"
+            class="text-slate-600 hover:text-slate-900 focus:outline-none p-1.5 rounded-lg hover:bg-slate-100"
+            aria-label="Mở mục lục">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+    </header>
+
+    <div class="min-h-screen flex flex-col lg:flex-row max-w-7xl mx-auto pt-14 lg:pt-0">
+
+        <!-- Sidebar Navigation / Table of Contents -->
+        <aside id="sidebar"
+            class="fixed lg:sticky top-0 left-0 z-[60] w-72 h-screen bg-white border-r border-slate-200 flex-shrink-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto shadow-2xl lg:shadow-none">
+            <div class="p-6">
+                <!-- Company Logo Header -->
+                <div class="mb-6 pb-4 border-b border-slate-100 flex items-start justify-between">
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center mb-3">
+                            <img src="../img/TA_Logo-removebg-preview.png"
+                                onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                alt="Thiên Ân Technology" class="h-12 max-h-14 w-auto object-contain">
+                        </div>
+                        <span
+                            class="text-xs font-semibold px-2.5 py-0.5 bg-blue-50 text-tac-blue rounded border border-blue-200">
+                            DOC ID: TAC-HDSD-02
+                        </span>
+                    </div>
+                    <button id="closeSidebarBtn"
+                        class="lg:hidden text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-100 focus:outline-none"
+                        aria-label="Đóng mục lục">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- TOC Title -->
+                <div
+                    class="flex items-center justify-between mb-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    <span>Mục Lục</span>
+                    <i class="fa-solid fa-[#0284c7] fa-list-ol"></i>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="space-y-1 text-sm font-medium" id="toc-nav">
+                    <a href="#sec-1"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">1.</span>
+                        <span class="truncate">Mục đích</span>
+                    </a>
+                    <a href="#sec-2"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">2.</span>
+                        <span class="truncate">Phạm vi áp dụng</span>
+                    </a>
+                    <a href="#sec-3"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">3.</span>
+                        <span class="truncate">Tài liệu tham chiếu</span>
+                    </a>
+                    <a href="#sec-4"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">4.</span>
+                        <span class="truncate">Định nghĩa & Từ viết tắt</span>
+                    </a>
+
+                    <div class="pt-2 pb-1">
+                        <a href="#sec-5"
+                            class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100 transition-colors">
+                            <span class="w-6 text-tac-blue font-bold text-xs">5.</span>
+                            <span class="truncate">Nội dung hướng dẫn</span>
+                        </a>
+                        <div class="ml-4 pl-2 border-l-2 border-slate-200 space-y-1 mt-1">
+                            <a href="#sec-5-1"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors group">
+                                <span class="font-mono text-slate-400 mr-2">5.1</span>
+                                <span class="truncate">Đăng nhập tài khoản</span>
+                            </a>
+                            <a href="#sec-5-2"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors group">
+                                <span class="font-mono text-slate-400 mr-2">5.2</span>
+                                <span class="truncate">Thay đổi mật khẩu</span>
+                                <i class="fa-solid fa-star text-amber-400 text-[11px] ml-auto flex-shrink-0"
+                                    title="Mục hay sử dụng"></i>
+                            </a>
+                            <a href="#sec-5-3"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors group">
+                                <span class="font-mono text-slate-400 mr-2">5.3</span>
+                                <span class="truncate">Xác thực 2 bước (2FA)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#sec-6"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">6.</span>
+                        <span class="truncate">Quy định Bảo mật Dữ liệu</span>
+                    </a>
+                    <a href="#sec-7"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">7.</span>
+                        <span class="truncate">Phê duyệt & Liên hệ</span>
+                    </a>
+                </nav>
+
+                <!-- Quick Help Box -->
+                <div class="mt-8 p-4 bg-slate-100 rounded-xl border border-slate-200">
+                    <div class="flex items-center space-x-2 text-tac-blue font-semibold text-xs uppercase mb-1">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Hỗ trợ Kỹ thuật</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2">Gặp sự cố khi đăng nhập Synology Drive hoặc quên mật khẩu?
+                    </p>
+                    <a href="http://10.10.8.35:8000"
+                        class="inline-flex items-center justify-center w-full px-3 py-1.5 bg-tac-blue hover:bg-blue-800 text-white rounded text-xs font-medium transition-colors">
+                        <i class="fa-solid fa-paper-plane mr-1.5"></i> Liên hệ IT Helpdesk
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Overlay for Mobile Sidebar -->
+        <div id="sidebarOverlay"
+            class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden lg:hidden transition-opacity"></div>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-4 md:p-8 lg:p-10 max-w-5xl mx-auto w-full">
+
+            <!-- Main Document Banner / Header -->
+            <div
+                class="bg-gradient-to-r from-slate-900 via-tac-blue to-slate-800 rounded-2xl p-6 md:p-8 text-white shadow-xl mb-10">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                    <span
+                        class="bg-white/20 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold border border-white/30">
+                        CÔNG TY TNHH CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ THIÊN ÂN
+                    </span>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">
+                    Hướng Dẫn sử dụng Synology Drive
+                </h1>
+
+                <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap gap-4 text-xs text-slate-300">
+                    <div><i class="fa-regular fa-file-code mr-1"></i> Mã văn bản: <strong>TAC-HDSD-02</strong></div>
+                    <div><i class="fa-regular fa-calendar-check mr-1"></i> Áp dụng từ: <strong>30/10/2026</strong></div>
+                    <div><i class="fa-regular fa-user mr-1"></i> Đơn vị phát hành: <strong>Bộ phận IT</strong></div>
+                    <div><i class="fa-regular fa-user mr-1"></i> Phiên bản: <strong>1.0</strong></div>
+                </div>
+            </div>
+
+            <!-- SECTION 1: MỤC ĐÍCH -->
+            <section id="sec-1" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">1</span>
+                        <h2 class="text-xl font-bold text-slate-800">Mục đích</h2>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-11">
+                        Cung cấp các hướng dẫn chi tiết chuẩn hóa giúp cán bộ nhân viên đăng nhập, quản lý và thay đổi
+                        mật khẩu an toàn trên hệ thống lưu trữ tập trung <strong>Synology Drive</strong> của Công ty.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 2: PHẠM VI ÁP DỤNG -->
+            <section id="sec-2" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">2</span>
+                        <h2 class="text-xl font-bold text-slate-800">Phạm vi áp dụng</h2>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-11">
+                        Quy định này áp dụng cho toàn thể cán bộ, nhân viên sử dụng tài khoản hệ thống NAS Synology do
+                        <strong class="text-slate-800">Công ty TNHH Cổ phần Đầu tư Công nghệ Thiên Ân</strong> cấp.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 3: TÀI LIỆU THAM CHIẾU -->
+            <section id="sec-3" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">3</span>
+                        <h2 class="text-xl font-bold text-slate-800">Tài liệu tham chiếu</h2>
+                    </div>
+                    <ul class="pl-11 list-disc list-inside text-sm text-slate-600 space-y-1">
+                        <li>Quy định An toàn thông tin & Quản lý dữ liệu lưu trữ nội bộ TAC.</li>
+                        <li>Tài liệu Hướng dẫn Quản trị Hệ thống Synology DiskStation Manager (DSM).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 4: ĐỊNH NGHĨA VÀ TỪ VIẾT TẮT -->
+            <section id="sec-4" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">4</span>
+                        <h2 class="text-xl font-bold text-slate-800">Định nghĩa và từ viết tắt</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-0 md:pl-11 mt-4">
+                        <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-tac-blue text-sm block">Synology DSM</span>
+                            <span class="text-xs text-slate-600">Giao diện hệ điều hành DiskStation Manager quản lý tài
+                                khoản và ứng dụng lưu trữ.</span>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-tac-blue text-sm block">Personal Settings</span>
+                            <span class="text-xs text-slate-600">Trang cài đặt tài khoản cá nhân, bao gồm tính năng thay
+                                đổi mật khẩu và thông tin tài khoản.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: NỘI DUNG QUY ĐỊNH -->
+            <section id="sec-5" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-6 border-b border-slate-100 pb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-tac-blue text-white flex items-center justify-center font-bold text-sm">5</span>
+                        <h2 class="text-2xl font-bold text-slate-800">Nội dung</h2>
+                    </div>
+
+                    <!-- MỤC 5.1: ĐĂNG NHẬP (BƯỚC 1 & BƯỚC 2) -->
+                    <div id="sec-5-1" class="scroll-mt-50">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.1</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn Đăng nhập Synology Drive</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-6">Mở trình duyệt web và truy cập đường dẫn <a
+                                href="http://tacorp.vn:5001" target="_blank"
+                                class="text-tac-blue font-bold underline">http://tacorp.vn:5001</a> để thực hiện các
+                            bước đăng nhập vào hệ thống:</p>
+
+                        <div class="space-y-6">
+
+                            <!-- BƯỚC 1 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">1</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 1: Nhập Tên tài khoản
+                                            (Username)</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Mở trình duyệt web, truy cập đường dẫn địa chỉ Synology Drive công ty (ví
+                                            dụ: <code>tacorp.vn:5001</code>). Nhập tên tài khoản được cấp (ví
+                                            dụ: <strong class="text-tac-blue">ict_drive</strong>) và nhấn nút
+                                            <strong>Mũi tên xanh</strong> để chuyển sang bước tiếp theo.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="../img/drive/user.jpg" alt="Bước 1: Nhập tài khoản"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 2 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">2</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 2: Nhập Mật khẩu & Tiến hành
+                                            Đăng nhập</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Nhập chính xác <strong>Mật khẩu hiện tại</strong> của tài khoản.
+                                            Tích chọn vào ô <strong class="text-slate-700">Stay signed in</strong> nếu
+                                            muốn duy trì đăng nhập trên thiết bị hiện tại, sau đó nhấn nút
+                                            <strong>Mũi tên xanh</strong> để đăng nhập vào hệ thống.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="../img/drive/pwd.jpg" alt="Bước 2: Nhập mật khẩu"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- MỤC 5.2: ĐỔI MẬT KHẨU (BƯỚC 3, BƯỚC 4, BƯỚC 5, BƯỚC 6) -->
+                    <div id="sec-5-2" class="scroll-mt-20 mt-10 pt-6 border-t border-slate-200">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.2</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn Đổi mật khẩu Synology Drive</h3>
+                            <span
+                                class="inline-flex items-center text-[10px] font-semibold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+                                <i class="fa-solid fa-star text-amber-400 mr-1 text-[9px]"></i> Thường dùng
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-6">Thực hiện các bước dưới đây sau khi đã đăng nhập thành
+                            công để đổi mật khẩu tài khoản cá nhân:</p>
+
+                        <div class="space-y-6">
+
+                            <!-- BƯỚC 3 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">1</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 1: Nhấn vào biểu tượng hình
+                                            người góc phải</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Tại giao diện màn hình chính Synology DiskStation Manager (DSM), quan sát
+                                            thanh công cụ phía trên bên phải và nhấp vào <strong>Biểu tượng hình người
+                                                (Account Profile)</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="../img/drive/icon.jpg" alt="Bước 3: Chọn biểu tượng hình người góc phải"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 4 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">2</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 2: Chọn Personal</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Trong menu vừa hiển thị thả xuống, bấm chọn vào dòng mục
+                                            <strong>Personal</strong> để mở trang thiết lập cá nhân.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="../img/drive/personal.jpg" alt="Bước 4: Chọn Personal"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 5 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">3</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 3: Chọn Change Password</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Cửa sổ <i>Personal</i> xuất hiện. Mặc định tại thẻ <strong>Account</strong>,
+                                            di chuyển đến dòng Password và bấm vào nút <strong>Change
+                                                Password</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="../img/drive/changepwd.jpg" alt="Bước 5: Chọn Change Password"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 6 -->
+                            <!-- MOCKUP CHUẨN SYNOLOGY DSM: CHANGE PASSWORD DIALOG CÓ CHÚ THÍCH -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">4</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 4: Đổi mật khẩu</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Cửa sổ <i>Personal</i> xuất hiện. Mặc định tại thẻ <strong>Account</strong>,
+                                            di chuyển đến dòng Password và bấm vào nút <strong>Change
+                                                Password</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Hộp thoại Synology Change Password Modal -->
+                                <div
+                                    class="bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden text-xs max-w-md mx-auto relative font-sans">
+
+                                    <!-- Header dialog -->
+                                    <div
+                                        class="px-5 py-3 border-b border-slate-100 flex justify-between items-center bg-white">
+                                        <span class="font-bold text-slate-700 text-sm">Change Password</span>
+                                        <button class="text-slate-400 hover:text-slate-600 focus:outline-none">
+                                            <i class="fa-solid fa-xmark text-sm"></i>
+                                        </button>
+                                    </div>
+
+                                    <!-- Body dialog -->
+                                    <div class="p-5 md:p-6 space-y-4">
+
+                                        <!-- 1. Current Password -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-32 flex-shrink-0 text-slate-600 font-medium">Current Password:
+                                            </div>
+                                            <div class="flex-1 flex items-center space-x-2">
+                                                <div
+                                                    class="relative flex-1 border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                    <input type="password" value="OldPass123" readonly
+                                                        class="w-full pl-3 pr-8 py-1.5 bg-white text-slate-700 text-xs focus:outline-none border-none">
+                                                    <span class="absolute right-2.5 top-2 text-slate-400"><i
+                                                            class="fa-regular fa-eye"></i></span>
+                                                </div>
+                                                <span
+                                                    class="text-red-600 font-extrabold text-sm font-mono flex-shrink-0">[1]</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- 2. New Password (với ô Strength Popup "Medium") -->
+                                        <div class="flex items-center space-x-2 relative">
+                                            <div class="w-32 flex-shrink-0 text-slate-600 font-medium">New Password:
+                                            </div>
+                                            <div class="flex-1 flex items-center space-x-2 relative">
+                                                <div
+                                                    class="relative flex-1 border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                    <input type="password" value="NewP@ss2026!" readonly
+                                                        class="w-full pl-3 pr-8 py-1.5 bg-white text-slate-700 text-xs focus:outline-none border-none ring-1 ring-blue-400">
+                                                    <span class="absolute right-2.5 top-2 text-slate-400"><i
+                                                            class="fa-regular fa-eye"></i></span>
+                                                </div>
+                                                <span
+                                                    class="text-red-600 font-extrabold text-sm font-mono flex-shrink-0">[2]</span>
+
+                                                <!-- Tooltip độ mạnh mật khẩu Synology (Medium Popup) -->
+
+                                            </div>
+                                        </div>
+
+                                        <!-- 3. Confirm Password -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-32 flex-shrink-0 text-slate-600 font-medium">Confirm password:
+                                            </div>
+                                            <div class="flex-1 flex items-center space-x-2">
+                                                <div
+                                                    class="relative flex-1 border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                    <input type="password" value="NewP@ss2026!" readonly
+                                                        class="w-full pl-3 pr-8 py-1.5 bg-white text-slate-700 text-xs focus:outline-none border-none">
+                                                    <span class="absolute right-2.5 top-2 text-slate-400"><i
+                                                            class="fa-regular fa-eye"></i></span>
+                                                </div>
+                                                <span
+                                                    class="text-red-600 font-extrabold text-sm font-mono flex-shrink-0">[3]</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Footer / Action Buttons -->
+                                    <div
+                                        class="px-5 py-3.5 bg-slate-50 border-t border-slate-100 flex justify-end items-center space-x-3">
+                                        <button
+                                            class="px-5 py-1.5 rounded-full bg-slate-200 text-slate-600 hover:bg-slate-300 transition font-medium text-xs">
+                                            Cancel
+                                        </button>
+                                        <div class="flex items-center space-x-1.5">
+                                            <div class="border-2 border-red-500 rounded-full p-0.5 bg-red-50/20">
+                                                <button
+                                                    class="px-6 py-1.5 rounded-full bg-[#0284c7] hover:bg-blue-600 text-white font-bold transition text-xs shadow">
+                                                    Apply
+                                                </button>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-sm font-mono flex-shrink-0">[4]</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Chú thích chi tiết bên dưới mockup -->
+                                <div
+                                    class="mt-4 max-w-md mx-auto grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-600">
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[1]</strong> Nhập mật khẩu hiện tại</div>
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[2]</strong> Nhập mật khẩu mới</div>
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[3]</strong> Xác nhận lại mật khẩu mới</div>
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[4]</strong> Nhấn nút Apply để lưu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MỤC 5.3: CÀI ĐẶT XÁC THỰC 2 BƯỚC (2-FACTOR AUTHENTICATION) -->
+                    <div id="sec-5-3" class="scroll-mt-20 mt-10 pt-6 border-t border-slate-200">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.3</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn Cài đặt Xác thực 2 bước (2-Factor
+                                Authentication)</h3>
+                            <span
+                                class="inline-flex items-center text-[10px] font-semibold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+                                <i class="fa-solid fa-star text-amber-400 mr-1 text-[9px]"></i> Khuyên dùng bảo mật
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-6">Thực hiện đầy đủ các bước dưới đây để thiết lập tính năng
+                            xác thực 2 bước thông qua ứng dụng <strong>Synology Secure SignIn</strong>:</p>
+
+                        <!-- DANH SÁCH CÁC BƯỚC TRÌNH BÀY CHI TIẾT KÈM HÌNH ẢNH MĨ THUẬT -->
+                        <div class="space-y-8 my-6">
+
+                            <!-- BƯỚC 1 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">1</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 1: Chọn phương thức 2-Factor
+                                            Authentication</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Tại cửa sổ <strong>Personal</strong>, chuyển sang thẻ
+                                            <strong>Security</strong>. Tại mục <i>Sign-in Method</i>, nhấp chọn
+                                            vào phương thức <strong>2-Factor Authentication</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\1.jpg" alt="Bước 1: Chọn 2-Factor Authentication"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 2 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">2</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 2: Chọn hình thức xác minh
+                                            bước 2</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Hộp thoại <i>Set up 2-factor authentication</i> hiển thị. Chọn một
+                                            trong các phương thức xác minh:
+                                        </p>
+                                        <ul class="list-disc list-inside text-xs text-slate-600 my-1 ml-2 space-y-0.5">
+                                            <li><strong>Approve sign-in:</strong> Phê duyệt đăng nhập 1-chạm trên ứng
+                                                dụng di động.</li>
+                                            <li><strong>Verification code (OTP):</strong> Nhập mã xác minh 6 chữ số từ
+                                                ứng dụng.</li>
+                                            <li><strong>Hardware security key:</strong> Sử dụng khóa bảo mật phần cứng
+                                                (USB, Passkey...).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\2.jpg" alt="Bước 2: Chọn hình thức xác minh"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 3 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">3</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 3: Xác minh danh tính (Verify
+                                            Your Identity)</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Cửa sổ yêu cầu xác minh danh tính xuất hiện. Nhập mật khẩu tài
+                                            khoản DSM hiện tại vào ô <strong>Current Password</strong> và nhấn
+                                            <strong>OK</strong> để tiếp tục.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\3.jpg" alt="Bước 3: Xác minh mật khẩu hiện tại"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 4 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">4</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 4: Xem hướng dẫn sử dụng
+                                            Approve Sign-in</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Màn hình hiển thị hướng dẫn các bước đăng nhập bằng tính năng Approve
+                                            Sign-in trên điện thoại. Nhấn nút <strong>Next</strong> để chuyển
+                                            tiếp.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\4.jpg" alt="Bước 4: Hướng dẫn Approve sign-in"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 5 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">5</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 5: Tải ứng dụng Synology
+                                            Secure SignIn</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Mở điện thoại di động, quét mã QR hoặc tải ứng dụng <strong>Synology Secure
+                                                SignIn</strong> từ App Store / Google Play Store. Bấm
+                                            <strong>Next</strong> để qua bước quét liên kết.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\5.jpg" alt="Bước 5: Tải app Secure SignIn"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+
+                            <!-- BƯỚC 6 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">6</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 6: Quét mã QR liên kết tài
+                                            khoản NAS</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Mở ứng dụng <i>Secure SignIn</i> trên điện thoại, chọn tính năng quét mã QR
+                                            và di chuyển camera đến mã <strong>QR Code</strong> đang hiển thị trên màn
+                                            hình máy tính. Nhấn <strong>Next</strong> sau khi quét.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\6.jpg" alt="Bước 6: Quét mã QR liên kết"
+                                        class="w-full h-auto rounded object-contain">
+
+                                </div>
+                            </div>
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">6</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 6: Quét mã QR liên kết tài
+                                            khoản NAS</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Mở ứng dụng <i>Secure SignIn</i> trên điện thoại, chọn tính năng quét mã QR
+                                            và di chuyển camera đến mã <strong>QR Code</strong> đang hiển thị trên màn
+                                            hình máy tính. Nhấn <strong>Next</strong> sau khi quét.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 items-center justify-items-center">
+                                    <div
+                                        class="w-60 bg-black border-[7px] border-slate-800 rounded-[40px] p-2.5 shadow-2xl relative text-white overflow-hidden">
+                                        <!-- Notch / Status Bar -->
+                                        <div
+                                            class="w-20 h-4 bg-black rounded-full mx-auto mb-1 flex items-center justify-end px-2">
+                                            <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                                        </div>
+                                        <div
+                                            class="flex justify-between items-center px-2 text-[10px] text-slate-300 mb-1">
+                                            <span class="font-bold">14:52</span>
+                                            <div class="flex items-center space-x-1">
+                                                <i class="fa-solid fa-signal text-[8px]"></i>
+                                                <i class="fa-solid fa-wifi text-[8px]"></i>
+                                                <i class="fa-solid fa-battery-full text-[9px]"></i>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="relative h-[280px] rounded-[24px] overflow-hidden bg-[#0f2c59] flex flex-col justify-between items-center p-3 text-center">
+                                            <div class="w-full flex justify-end">
+                                                <i
+                                                    class="fa-solid fa-ellipsis-vertical text-slate-300 text-xs cursor-pointer"></i>
+                                            </div>
+
+                                            <!-- Graphic Vector PC + Smartphone -->
+                                            <div class="my-auto space-y-3 flex flex-col items-center">
+                                                <div class="relative w-32 h-24 flex items-center justify-center">
+                                                    <div
+                                                        class="w-24 h-16 bg-slate-100 rounded-md border border-slate-300 p-1 flex flex-col items-center justify-center shadow">
+                                                        <div class="grid grid-cols-2 gap-1 w-8 h-8">
+                                                            <div class="w-3 h-3 bg-blue-400 rounded-sm"></div>
+                                                            <div class="w-3 h-3 bg-blue-400 rounded-sm"></div>
+                                                            <div class="w-3 h-3 bg-blue-400 rounded-sm"></div>
+                                                            <div class="w-3 h-3 bg-blue-200 rounded-sm"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="absolute -left-1 bottom-1 flex items-center bg-white rounded-full p-1 border border-slate-200">
+                                                        <i class="fa-solid fa-seedling text-emerald-600 text-[9px]"></i>
+                                                    </div>
+                                                    <div
+                                                        class="absolute right-0 bottom-0 w-12 h-20 bg-[#0f2c59] border-2 border-white rounded-lg p-1 flex items-center justify-center shadow-lg">
+                                                        <div
+                                                            class="w-6 h-6 border border-cyan-400 border-dashed rounded flex items-center justify-center">
+                                                            <div class="w-3 h-0.5 bg-cyan-400"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <h4 class="text-[11px] font-semibold text-white leading-tight px-1">
+                                                    Add new OTP profiles or Approve sign-in accounts
+                                                </h4>
+
+                                                <div class="w-full">
+                                                    <div class="border-2 border-red-500 rounded-lg p-0.5 bg-red-50/20">
+                                                        <button
+                                                            class="w-full py-1.5 bg-[#26c6da] hover:bg-[#00acc1] text-slate-900 font-bold text-[11px] rounded transition">
+                                                            Add
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-y-1">
+                                                    <p class="text-[8px] text-slate-300 leading-tight">
+                                                        Sign in to your Synology Account to start syncing with your
+                                                        other devices...
+                                                    </p>
+                                                    <a href="#"
+                                                        class="inline-block text-[10px] font-semibold text-[#26c6da]">Sign
+                                                        In</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span
+                                            class="text-red-500 font-bold text-xs font-mono absolute bottom-3 right-3 z-20">[1]</span>
+                                        <div class="w-16 h-1 bg-slate-600 rounded-full mx-auto mt-1"></div>
+                                    </div>
+                                    <!-- MÀN HÌNH 1: QUÉT QR THỰC TẾ & CONNECTING (TÁI HIỆN HÌNH 1.JPG CÓ MÃ QR) -->
+                                    <div
+                                        class="w-60 bg-black border-[6px] border-slate-800 rounded-[36px] p-2.5 shadow-xl text-xs text-white relative font-sans overflow-hidden">
+                                        <!-- Dynamic Island / Notch -->
+                                        <div
+                                            class="w-20 h-4 bg-black rounded-full mx-auto mb-1 flex items-center justify-end px-2">
+                                            <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                                        </div>
+
+                                        <!-- Status Bar -->
+                                        <div class="flex justify-between items-center px-2 text-[10px] text-slate-300">
+                                            <span class="font-bold">14:23</span>
+                                            <i class="fa-solid fa-wifi"></i>
+                                        </div>
+
+                                        <!-- Content Screen 1 -->
+                                        <div
+                                            class="relative my-4 h-64 bg-slate-900 rounded-2xl p-2 border border-slate-800 flex flex-col justify-between items-center overflow-hidden">
+
+                                            <!-- Khung ngắm Camera kèm MÃ QR phía sau -->
+                                            <div
+                                                class="w-full h-full border-2 border-dashed border-cyan-400/80 rounded-xl relative flex items-center justify-center p-2 bg-slate-950">
+                                                <!-- 4 góc khung ngắm -->
+                                                <div
+                                                    class="absolute top-1 left-1 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-400">
+                                                </div>
+                                                <div
+                                                    class="absolute top-1 right-1 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-400">
+                                                </div>
+                                                <div
+                                                    class="absolute bottom-1 left-1 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-400">
+                                                </div>
+                                                <div
+                                                    class="absolute bottom-1 right-1 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-400">
+                                                </div>
+
+                                                <!-- Hình ảnh Mã QR hiển thị trong ống kính camera -->
+                                                <div
+                                                    class="w-28 h-28 bg-white p-1.5 rounded-lg shadow-md opacity-40 blur-[0.5px] flex items-center justify-center">
+                                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://tacorp.vn:5001"
+                                                        alt="Mã QR Synology NAS" class="w-full h-full object-contain">
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="text-[9px] text-cyan-400 mt-2 hover:underline cursor-pointer">
+                                                Set Approve sign-in
+                                                Manually</div>
+                                        </div>
+
+                                        <!-- Chú thích số [1] -->
+                                        <span
+                                            class="text-red-500 font-bold text-xs font-mono absolute bottom-2 right-3">[1]</span>
+                                        <div class="w-16 h-1 bg-slate-600 rounded-full mx-auto mt-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- BƯỚC 7 -->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">7</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 7: Bổ sung phương thức dự
+                                            phòng (OTP)</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Màn hình giới thiệu thiết lập mã xác minh OTP dự phòng khi điện thoại ngoại
+                                            tuyến (offline). Bấm <strong>Next</strong> để tiếp tục.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                    <img src="..\img\drive\2FA\7.jpg" alt="Bước 7: Phương thức dự phòng OTP"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+                            <!-- bước 8-->
+                            <div
+                                class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                                <div class="flex items-start space-x-3 mb-3">
+                                    <span class="step-badge flex-shrink-0">8</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bước 8: Thiết lập Email khôi phục
+                                            (Backup Email) & Hoàn tất</h4>
+                                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                            Nhập địa chỉ email cá nhân/công vụ vào ô <strong>Backup email</strong> (ví
+                                            dụ: <code class="text-tac-blue font-bold">ict@tacorp.vn</code>).
+                                            Nhấn nút <strong>Send Verification Mail</strong> -> tại popup xác
+                                            nhận chọn <strong>Send</strong> và bấm <strong>Next</strong> để
+                                            hoàn tất quá trình kích hoạt 2FA.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 items-center justify-items-center">
+                                    <!-- MÀN HÌNH 2: TÀI KHOẢN TAC_DRIVE ĐÃ THÊM (Hình 2.jpg) -->
+                                    <div
+                                        class="w-60 bg-white border-[6px] border-slate-800 rounded-[36px] p-2.5 shadow-xl text-xs text-slate-800 relative font-sans">
+                                        <div
+                                            class="flex justify-between items-center px-2 pt-1 text-[10px] text-slate-700">
+                                            <span class="font-bold">14:23</span>
+                                            <i class="fa-solid fa-wifi"></i>
+                                        </div>
+
+                                        <div
+                                            class="text-center py-2 font-bold text-sm border-b border-slate-100 flex justify-between items-center px-1">
+                                            <span>Account</span>
+                                            <i class="fa-solid fa-plus text-blue-500 text-xs"></i>
+                                        </div>
+
+                                        <!-- Item Account TAC_Drive với viền đỏ [2] -->
+                                        <div class="my-4 space-y-2">
+                                            <div class="border-2 border-red-500 rounded-xl p-1 bg-red-50/10">
+                                                <div class="p-2 bg-slate-50 rounded-lg flex items-center space-x-2.5">
+                                                    <div
+                                                        class="w-8 h-8 rounded-full bg-lime-500 text-white font-bold flex items-center justify-center text-xs flex-shrink-0">
+                                                        I
+                                                    </div>
+                                                    <div class="flex-1 min-w-0 text-left">
+                                                        <div class="font-bold text-[11px] text-slate-900 truncate">
+                                                            TAC_Drive</div>
+                                                        <div class="text-[9px] text-slate-400 truncate">tacorp.vn:5001
+                                                        </div>
+                                                        <div class="text-[9px] text-slate-400 truncate">ict_drive</div>
+                                                    </div>
+                                                    <i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Navigation Tab bar bottom -->
+                                        <div
+                                            class="pt-12 border-t border-slate-100 flex justify-around text-[9px] text-slate-400">
+                                            <div class="text-blue-600 font-bold flex flex-col items-center">
+                                                <i class="fa-regular fa-circle-check text-sm"></i>
+                                                <span>Account</span>
+                                            </div>
+                                            <div class="flex flex-col items-center">
+                                                <i class="fa-regular fa-comment-dots text-sm"></i>
+                                                <span>OTP</span>
+                                            </div>
+                                        </div>
+
+                                        <span
+                                            class="text-red-500 font-bold text-xs font-mono absolute bottom-8 right-3">[1]</span>
+                                        <div class="w-16 h-1 bg-slate-800 rounded-full mx-auto mt-2"></div>
+                                    </div>
+
+                                    <!-- MÀN HÌNH 3: SINH MÃ OTP 037 849 (Hình 3.jpg) -->
+                                    <div
+                                        class="w-60 bg-white border-[6px] border-slate-800 rounded-[36px] p-2.5 shadow-xl text-xs text-slate-800 relative font-sans">
+                                        <div
+                                            class="flex justify-between items-center px-2 pt-1 text-[10px] text-slate-700">
+                                            <span class="font-bold">14:24</span>
+                                            <i class="fa-solid fa-wifi"></i>
+                                        </div>
+
+                                        <div
+                                            class="text-center py-2 font-bold text-sm border-b border-slate-100 flex justify-between items-center px-1">
+                                            <span>OTP</span>
+                                            <i class="fa-solid fa-plus text-blue-500 text-xs"></i>
+                                        </div>
+
+                                        <!-- OTP Code Item với viền đỏ [3] -->
+                                        <div class="my-4">
+                                            <div class="border-2 border-red-500 rounded-xl p-1 bg-red-50/10">
+                                                <div class="p-2.5 bg-slate-50 rounded-lg text-left">
+                                                    <div class="flex items-center space-x-2 mb-1">
+                                                        <span
+                                                            class="w-5 h-5 bg-blue-600 text-white rounded-full text-[8px] font-bold flex items-center justify-center">DSM</span>
+                                                        <div>
+                                                            <div class="font-bold text-[10px] text-slate-900">Synology
+                                                                DSM</div>
+                                                            <div class="text-[8px] text-slate-400">ict_drive@TAC_Drive
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center mt-2">
+                                                        <span
+                                                            class="text-xl font-bold font-mono text-blue-600 tracking-wider">037
+                                                            849</span>
+                                                        <div
+                                                            class="w-4 h-4 rounded-full border-2 border-blue-500 border-t-transparent animate-spin">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Toast alert bottom -->
+                                        <div class="mt-4 bg-slate-800 text-white text-[9px] p-1.5 rounded text-left">
+                                            OTP profile added
+                                        </div>
+
+                                        <!-- Navigation Tab bar bottom -->
+                                        <div
+                                            class="pt-4 border-t border-slate-100 flex justify-around text-[9px] text-slate-400">
+                                            <div class="flex flex-col items-center">
+                                                <i class="fa-regular fa-circle-check text-sm"></i>
+                                                <span>Account</span>
+                                            </div>
+                                            <div class="text-blue-600 font-bold flex flex-col items-center">
+                                                <i class="fa-regular fa-comment-dots text-sm"></i>
+                                                <span>OTP</span>
+                                            </div>
+                                        </div>
+
+                                        <span
+                                            class="text-red-500 font-bold text-xs font-mono absolute bottom-8 right-3">[2]</span>
+                                        <div class="w-16 h-1 bg-slate-800 rounded-full mx-auto mt-2"></div>
+                                    </div>
+                                    <!-- MÀN HÌNH 1: KHỞI TẠO TẢI VÀ THÊM TÀI KHOẢN TRÊN APP (TÁI HIỆN BẰNG HÌNH 4.JPG) -->
+
+                                </div>
+
+                                <!-- Bảng giải thích chú thích -->
+                                <!-- <div
+                                    class="mt-6 max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 text-[11px] text-slate-600">
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[1]</strong>
+                                        Camera quét mã QR tự động kết nối (Hình 1.jpg)</div>
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[2]</strong> Tài
+                                        khoản TAC_Drive đã liên kết (Hình 2.jpg)</div>
+                                    <div class="p-2 bg-white rounded border border-slate-200"><strong
+                                            class="text-red-600">[3]</strong> Lấy
+                                        mã xác minh OTP 6 chữ số (Hình 3.jpg)</div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- BƯỚC 9 -->
+                        <div
+                            class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md ">
+                            <div class="flex items-start space-x-3 mb-3">
+                                <span class="step-badge flex-shrink-0">9</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bước 9: màn hình tài khoản đã thêm
+                                        và giao diện lấy mã OTP 6 chữ số để điền ở Bước 8</h4>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Sử dụng tính năng quét QR/OTP trong ứng dụng, sau đó nhập mã xác
+                                        minh 6 chữ số được sinh ra vào ô <strong>Verification code
+                                            (OTP)</strong> và nhấn <strong>Next</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                <img src="..\img\drive\2FA\8.jpg" alt="Bước 8: Nhập mã OTP xác minh"
+                                    class="w-full h-auto rounded object-contain">
+                            </div>
+                        </div>
+
+                        <!-- BƯỚC 10 -->
+                        <div
+                            class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                            <div class="flex items-start space-x-3 mb-3">
+                                <span class="step-badge flex-shrink-0">10</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bước 10: Thiết lập Email khôi phục
+                                        (Backup Email) & Hoàn tất</h4>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Nhập địa chỉ email cá nhân/công vụ vào ô <strong>Backup email</strong> (ví
+                                        dụ: <code class="text-tac-blue font-bold">ict@tacorp.vn</code>).
+                                        Nhấn nút <strong>Send Verification Mail</strong> -> tại popup xác
+                                        nhận chọn <strong>Send</strong> và bấm <strong>Next</strong> để
+                                        hoàn tất quá trình kích hoạt 2FA.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                                <div
+                                    class="bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden">
+                                    <img src="..\img\drive\2FA\9.jpg" alt="Bước 9a: Nhập Backup Email"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                                <div
+                                    class="bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden">
+                                    <img src="..\img\drive\2FA\10.jpg" alt="Bước 9b: Xác nhận gửi Email khôi phục"
+                                        class="w-full h-auto rounded object-contain">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BƯỚC 11 (Hình 13.jpg) -->
+                        <div
+                            class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                            <div class="flex items-start space-x-3 mb-3">
+                                <span class="step-badge flex-shrink-0">11</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bước 11: Kiểm tra hộp thư Email xác
+                                        minh từ Synology</h4>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Mở hộp thư điện tử cá nhân/công ty, tìm email gửi từ
+                                        <code>sns@synologynotification.com</code> với tiêu đề <strong>[Synology]
+                                            Verify your email address</strong>. Bấm vào đường dẫn
+                                        <strong>link</strong> trong nội dung thư để hoàn tất xác thực.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                <img src="../img/drive/2FA/11.jpg" alt="Bước 10: Email xác minh từ Synology"
+                                    class="w-full h-auto rounded object-contain">
+                            </div>
+                        </div>
+
+                        <!-- BƯỚC 12 (Hình 11.jpg) -->
+                        <div
+                            class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                            <div class="flex items-start space-x-3 mb-3">
+                                <span class="step-badge flex-shrink-0">12</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bước 12: Nhận thông báo
+                                        Verification Successful</h4>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Trình duyệt sẽ mở ra trang xác nhận <strong>Verification
+                                            Successful</strong>. Hệ thống thông báo email này đã đăng ký
+                                        thành công để nhận mã xác minh khẩn cấp và thông báo hệ thống.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                <img src="../img/drive/2FA/12.jpg" alt="Bước 11: Thông báo Verification Successful"
+                                    class="w-full h-auto rounded object-contain">
+                            </div>
+                        </div>
+
+                        <!-- BƯỚC 13 (Hình 12.jpg) -->
+                        <div
+                            class="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                            <div class="flex items-start space-x-3 mb-3">
+                                <span class="step-badge flex-shrink-0">13</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bước 13: Trạng thái Verified & Hoàn
+                                        tất cài đặt</h4>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Quay trở lại cửa sổ thiết lập DSM, tại dòng Backup email sẽ chuyển sang
+                                        trạng thái nhãn xanh <strong class="text-emerald-600">Verified</strong>. Bấm
+                                        nút
+                                        <strong>Next</strong> (hoặc Apply) để hoàn tất toàn bộ quy trình kích hoạt
+                                        xác thực 2 bước.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-3 bg-white p-2 rounded-lg border border-slate-200 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                                <img src="../img/drive/2FA/13.jpg" alt="Bước 12: Trạng thái Verified hoàn tất"
+                                    class="w-full h-auto rounded object-contain">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- SECTION 6: KHUYẾN NGHỊ BẢO MẬT -->
+            <section id="sec-6" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">6</span>
+                        <h2 class="text-xl font-bold text-slate-800">Quy định Bảo mật Dữ liệu NAS</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Card 1 -->
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex items-center space-x-2 text-tac-blue font-bold text-sm mb-2">
+                                <i class="fa-solid fa-user-shield"></i>
+                                <span>Tiêu chuẩn Đặt Mật khẩu</span>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Mật khẩu mới có độ dài tối thiểu từ <strong>8 - 12 ký tự</strong> trở lên.</li>
+                                <li>Kết hợp đầy đủ chữ hoa, chữ thường, chữ số và ký tự đặc biệt (ví dụ: @, #, $, !).
+                                </li>
+                                <li>Không sử dụng tên cá nhân, ngày tháng năm sinh hoặc mật khẩu dễ đoán.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex items-center space-x-2 text-red-600 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>An toàn Tài khoản</span>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Thực hiện đổi mật khẩu mặc định ngay trong lần đăng nhập đầu tiên.</li>
+                                <li>Đăng xuất tài khoản Web Drive khi rời khỏi bàn làm việc hoặc dùng máy tính chung.
+                                </li>
+                                <li>Báo ngay cho Bộ phận IT khi phát hiện nghi vấn lộ thông tin đăng nhập.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7: PHÊ DUYỆT VÀ LIÊN HỆ -->
+            <section id="sec-7" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center font-bold text-sm">7</span>
+                        <h2 class="text-xl font-bold text-slate-800">Thông tin phê duyệt & Nơi nhận</h2>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                        <!-- Nơi nhận -->
+                        <div class="space-y-1">
+                            <strong class="text-slate-800 block text-sm mb-2">Nơi nhận:</strong>
+                            <p>• Toàn thể BQL & NV (để thực hiện);</p>
+                            <p>• Bộ phận IT (để phối hợp & hỗ trợ);</p>
+                            <p>• Lưu: VT, IT.</p>
+                        </div>
+
+                        <!-- Chữ ký & Ngày ban hành -->
+                        <div class="text-right flex flex-col justify-between space-y-4">
+                            <div>
+                                <p class="italic">TP. Hồ Chí Minh, ngày 30 tháng 10 năm 2026</p>
+                                <strong class="text-slate-900 block mt-1">GIÁM ĐỐC</strong>
+                            </div>
+                            <div class="pt-8">
+                                <span class="font-bold text-slate-900 text-sm block tracking-wider uppercase">Huỳnh Kim
+                                    Thanh Danh</span>
+                                <span class="text-[10px] text-slate-400">Đã ký duyệt ban hành</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-400">
+        <p>© 2026 Công ty TNHH Cổ phần Đầu tư Công nghệ Thiên Ân (TAC). All rights reserved</p>
+        <p class="mt-1">Tài liệu lưu hành nội bộ</p>
+    </footer>
+    </main>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn"
+        class="fixed bottom-6 right-6 z-50 w-11 h-11 md:w-12 md:h-12 bg-tac-blue text-white rounded-full shadow-lg hover:bg-blue-800 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tac-blue transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none flex items-center justify-center group active:scale-95"
+        aria-label="Về đầu trang" title="Về đầu trang">
+        <svg class="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-0.5" fill="none"
+            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+    <!-- Main JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

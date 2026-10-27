@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>TAC-HDSD-01 - Hướng dẫn sử dụng Email| Thiên Ân Technology</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="../js/tailwind-config.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased" oncontextmenu="return false;"
+    onselectstart="return false;" oncopy="return false;" oncut="return false;" ondragstart="return false;">
+
+    <!-- Top Header Navigation Mobile -->
+    <header id="mobileHeader"
+        class="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 py-2.5 flex items-center justify-between shadow-sm transition-transform duration-300 ease-in-out">
+        <div class="flex items-center space-x-2">
+            <img src="../img/TA_Logo-removebg-preview.png"
+                onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';" alt="Thiên Ân Technology"
+                class="h-8 w-auto object-contain">
+        </div>
+        <button id="mobileMenuBtn"
+            class="text-slate-600 hover:text-slate-900 focus:outline-none p-1.5 rounded-lg hover:bg-slate-100"
+            aria-label="Mở mục lục">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+    </header>
+
+    <div class="min-h-screen flex flex-col lg:flex-row max-w-7xl mx-auto pt-14 lg:pt-0">
+
+        <!-- Sidebar Navigation / Table of Contents -->
+        <aside id="sidebar"
+            class="fixed lg:sticky top-0 left-0 z-[60] w-72 h-screen bg-white border-r border-slate-200 flex-shrink-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto shadow-2xl lg:shadow-none">
+            <div class="p-6">
+                <!-- Company Logo Header -->
+                <div class="mb-6 pb-4 border-b border-slate-100 flex items-start justify-between">
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center mb-3">
+                            <img src="../img/TA_Logo-removebg-preview.png"
+                                onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                alt="Thiên Ân Technology" class="h-12 max-h-14 w-auto object-contain">
+                        </div>
+                        <span
+                            class="text-xs font-semibold px-2.5 py-0.5 bg-blue-50 text-tac-blue rounded border border-blue-200">
+                            DOC ID: TAC-HDSD-01
+
+                        </span>
+                    </div>
+                    <button id="closeSidebarBtn"
+                        class="lg:hidden text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-100 focus:outline-none"
+                        aria-label="Đóng mục lục">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- TOC Title -->
+                <div
+                    class="flex items-center justify-between mb-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    <span>Mục Lục</span>
+                    <i class="fa-solid fa-[#0284c7] fa-list-ol"></i>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="space-y-1 text-sm font-medium" id="toc-nav">
+                    <a href="#sec-1"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">1.</span>
+                        <span class="truncate">Mục đích</span>
+                    </a>
+                    <a href="#sec-2"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">2.</span>
+                        <span class="truncate">Phạm vi áp dụng</span>
+                    </a>
+                    <a href="#sec-3"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">3.</span>
+                        <span class="truncate">Tài liệu tham chiếu</span>
+                    </a>
+                    <a href="#sec-4"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">4.</span>
+                        <span class="truncate">Định nghĩa & Từ viết tắt</span>
+                    </a>
+
+                    <div class="pt-2 pb-1">
+                        <a href="#sec-5"
+                            class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-800 font-semibold hover:bg-slate-100 transition-colors">
+                            <span class="w-6 text-tac-blue font-bold text-xs">5.</span>
+                            <span class="truncate">Nội dung</span>
+                        </a>
+                        <div class="ml-4 pl-2 border-l-2 border-slate-200 space-y-1 mt-1">
+                            <a href="#sec-5-1"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors group">
+                                <span class="font-mono text-slate-400 mr-2">5.1</span>
+                                <span class="truncate">Đổi mật khẩu</span>
+                                <i class="fa-solid fa-star text-amber-400 text-[11px] ml-auto flex-shrink-0"
+                                    title="Mục hay sử dụng"></i>
+                            </a>
+                            <a href="#sec-5-2"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors">
+                                <span class="font-mono text-slate-400 mr-2">5.2</span>
+                                <span class="truncate">Thêm email dự phòng</span>
+                            </a>
+                            <a href="#sec-5-3"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors">
+                                <span class="font-mono text-slate-400 mr-2">5.3</span>
+                                <span class="truncate">Xác thực 2 bước (2FA)</span>
+                            </a>
+                            <a href="#sec-5-4"
+                                class="toc-item flex items-center px-3 py-1.5 rounded-md text-xs text-slate-600 hover:bg-slate-100 transition-colors group">
+                                <span class="font-mono text-slate-400 mr-2">5.4</span>
+                                <span class="truncate">Khôi phục mật khẩu</span>
+                                <i class="fa-solid fa-star text-amber-400 text-[11px] ml-auto flex-shrink-0"
+                                    title="Mục hay sử dụng"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#sec-6"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">6.</span>
+                        <span class="truncate">Hướng dẫn bổ sung & Bảo mật</span>
+                    </a>
+                    <a href="#sec-7"
+                        class="toc-item flex items-center px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <span class="w-6 text-slate-400 font-semibold text-xs">7.</span>
+                        <span class="truncate">Phê duyệt & Liên hệ</span>
+                    </a>
+                </nav>
+
+                <!-- Quick Help Box -->
+                <div class="mt-8 p-4 bg-slate-100 rounded-xl border border-slate-200">
+                    <div class="flex items-center space-x-2 text-tac-blue font-semibold text-xs uppercase mb-1">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Hỗ trợ Kỹ thuật</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2">Gặp sự cố khi đăng nhập hoặc cài đặt 2FA?</p>
+                    <a href="http://10.10.8.35:8000"
+                        class="inline-flex items-center justify-center w-full px-3 py-1.5 bg-tac-blue hover:bg-blue-800 text-white rounded text-xs font-medium transition-colors">
+                        <i class="fa-solid fa-paper-plane mr-1.5"></i> Liên hệ IT
+                        Helpdesk
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Overlay for Mobile Sidebar -->
+        <div id="sidebarOverlay"
+            class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden lg:hidden transition-opacity"></div>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-4 md:p-8 lg:p-10 max-w-5xl mx-auto w-full">
+
+            <!-- Main Document Banner / Header -->
+            <div
+                class="bg-gradient-to-r from-slate-900 via-tac-blue to-slate-800 rounded-2xl p-6 md:p-8 text-white shadow-xl mb-10">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                    <span
+                        class="bg-white/20 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold border border-white/30">
+                        CÔNG TY TNHH CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ THIÊN ÂN
+                    </span>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">
+                    Hướng Dẫn Sử Dụng Hệ Thống Email Nội Bộ
+                </h1>
+
+                <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap gap-4 text-xs text-slate-300">
+                    <div><i class="fa-regular fa-file-code mr-1"></i> Mã văn bản: <strong>TAC-HDSD-01</strong></div>
+                    <div><i class="fa-regular fa-calendar-check mr-1"></i> Áp dụng từ: <strong>30/10/2026</strong></div>
+                    <div><i class="fa-regular fa-user mr-1"></i> Đơn vị phát hành: <strong>Bộ phận IT</strong></div>
+                    <div><i class="fa-regular fa-user mr-1"></i> Phiên bản: <strong>1.0</strong></div>
+
+                </div>
+            </div>
+
+            <!-- SECTION 1: MỤC ĐÍCH -->
+            <section id="sec-1" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">1</span>
+                        <h2 class="text-xl font-bold text-slate-800">Mục đích</h2>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-11">
+                        Cung cấp các hướng dẫn chi tiết và chuẩn hóa giúp toàn thể cán bộ nhân viên sử dụng hiệu quả, an
+                        toàn hệ thống email của Công ty; đồng thời tăng cường tối đa tính bảo mật cho dữ liệu truyền
+                        thông doanh nghiệp.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 2: PHẠM VI ÁP DỤNG -->
+            <section id="sec-2" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">2</span>
+                        <h2 class="text-xl font-bold text-slate-800">Phạm vi áp dụng</h2>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-11">
+                        Quy định này áp dụng bắt buộc đối với tất cả cán bộ, nhân viên, cộng tác viên đang làm việc và
+                        sử dụng tài khoản email do <strong class="text-slate-800">Công ty TNHH Cổ phần Đầu tư Công nghệ
+                            Thiên Ân</strong> cấp.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 3: TÀI LIỆU THAM CHIẾU -->
+            <section id="sec-3" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">3</span>
+                        <h2 class="text-xl font-bold text-slate-800">Tài liệu tham chiếu</h2>
+                    </div>
+                    <ul class="pl-11 list-disc list-inside text-sm text-slate-600 space-y-1">
+                        <li>Quy định An toàn thông tin & Bảo mật nội bộ Công ty.</li>
+                        <li>Chính sách quản lý tài khoản và truy cập hệ thống công nghệ thông tin TAC.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 4: ĐỊNH NGHĨA VÀ TỪ VIẾT TẮT -->
+            <section id="sec-4" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-sm">4</span>
+                        <h2 class="text-xl font-bold text-slate-800">Định nghĩa và từ viết tắt</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-0 md:pl-11 mt-4">
+                        <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-tac-blue text-sm block">Webmail</span>
+                            <span class="text-xs text-slate-600">Giao diện truy cập email trực tuyến thông qua trình
+                                duyệt web (Chrome, Firefox, Edge...).</span>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-tac-blue text-sm block">2FA (Two-Factor Authentication)</span>
+                            <span class="text-xs text-slate-600">Xác thực 2 yếu tố / Xác thực 2 bước tăng cường bảo mật
+                                cho tài khoản.</span>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-tac-blue text-sm block">OTP (One-Time Password)</span>
+                            <span class="text-xs text-slate-600">Mã xác minh ngẫu nhiên 6 chữ số dùng 1 lần sinh ra từ
+                                ứng dụng Authenticator.</span>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-tac-blue text-sm block">Recovery Email</span>
+                            <span class="text-xs text-slate-600">Email dự phòng cá nhân dùng để nhận liên kết tự khôi
+                                phục mật khẩu khi quên.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: NỘI DUNG QUY ĐỊNH -->
+            <section id="sec-5" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-6 border-b border-slate-100 pb-4">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-tac-blue text-white flex items-center justify-center font-bold text-sm">5</span>
+                        <h2 class="text-2xl font-bold text-slate-800">Nội dung</h2>
+                    </div>
+
+                    <!-- Initiation & Login intro -->
+                    <div class="space-y-4 text-sm text-slate-600 mb-8">
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50/60 rounded-lg border border-blue-100">
+                            <i class="fa-solid fa-circle-info text-tac-blue mt-0.5"></i>
+                            <div>
+                                <strong class="text-slate-800">Khởi tạo tài khoản:</strong> Nhân viên mới nhận việc liên
+                                hệ bộ phận Quản lý/IT để được khởi tạo và cấp tài khoản email công vụ.
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-start space-x-3 p-3 bg-emerald-50/60 rounded-lg border border-emerald-100">
+                            <i class="fa-solid fa-link text-emerald-600 mt-0.5"></i>
+                            <div>
+                                <strong class="text-slate-800">Đăng nhập Webmail:</strong> Truy cập đường dẫn chính
+                                thức:
+                                <a href="https://tacorp.vn:777/webmail/logon" target="_blank"
+                                    class="text-tac-blue underline font-semibold hover:text-blue-800">https://tacorp.vn:777/webmail/logon</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOCKUP: WEBMAIL LOGIN SCREENSHOT -->
+                    <div class="my-6 max-w-md mx-auto bg-slate-100 p-6 rounded-xl border border-slate-300 shadow-md">
+                        <div class="text-center mb-4">
+                            <!-- Logo Thiên Ân -->
+                            <div class="flex justify-center mb-3">
+                                <img src="../img/TA_Logo-removebg-preview.png"
+                                    onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                    alt="Thiên Ân Technology" class="h-12 max-h-14 w-auto object-contain">
+                            </div>
+                            <h3 class="text-slate-700 text-xl font-normal">Webmail Login</h3>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 space-y-3">
+                            <div class="relative">
+                                <span class="absolute left-3 top-2.5 text-slate-400"><i
+                                        class="fa-solid fa-user"></i></span>
+                                <input type="text" readonly value="ict@tacorp.vn"
+                                    class="webmail-input pl-9 text-slate-700 text-xs">
+                            </div>
+                            <div class="relative">
+                                <span class="absolute left-3 top-2.5 text-slate-400"><i
+                                        class="fa-solid fa-lock"></i></span>
+                                <input type="password" readonly value="password"
+                                    class="webmail-input pl-9 text-slate-700 text-xs">
+                                <span class="absolute right-3 top-2.5 text-slate-400 cursor-pointer"><i
+                                        class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-blue-600 hover:underline cursor-pointer font-medium">forgot
+                                    your password?</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="rem" class="mr-2 rounded border-slate-300">
+                                <label for="rem" class="text-xs text-slate-600">Remember Me</label>
+                            </div>
+                            <button
+                                class="w-full bg-[#1f648b] text-white py-2 rounded text-sm font-semibold hover:bg-blue-800 transition">
+                                Sign In <i class="fa-solid fa-arrow-right-long ml-1"></i>
+                            </button>
+                            <div class="pt-2 space-y-2">
+                                <select class="w-full text-xs border border-slate-300 rounded p-1.5 text-slate-600">
+                                    <option>English</option>
+                                </select>
+                                <select class="w-full text-xs border border-slate-300 rounded p-1.5 text-slate-600">
+                                    <option>WorldClient</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p class="text-center text-[11px] text-slate-400 mt-2">Giao diện đăng nhập hệ thống Webmail Công
+                            ty</p>
+                    </div>
+
+                    <!-- Navigation to Security settings -->
+                    <div class="mt-8 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-800 text-sm mb-2 flex items-center">
+                            <i class="fa-solid fa-sliders text-tac-blue mr-2"></i> Truy cập trang Thiết lập Bảo mật
+                            (Security Settings):
+                        </h4>
+                        <ol class="list-decimal list-inside text-xs text-slate-600 space-y-1.5 ml-2">
+                            <li>Tại giao diện chính sau khi đăng nhập thành công, bấm vào biểu tượng <strong>Bánh răng
+                                    (Cài đặt)</strong> ở góc trên bên phải.</li>
+                            <li>Trong menu xổ xuống, chọn mục <strong>Security (Bảo mật)</strong>.</li>
+                        </ol>
+
+                        <!-- MOCKUP: SETTINGS MENU -->
+                        <div
+                            class="mt-4 bg-white border border-slate-300 rounded-lg p-2 shadow-inner overflow-hidden max-w-2xl mx-auto">
+                            <div
+                                class="bg-[#1f648b] text-white p-2 text-xs flex justify-between items-center rounded-t">
+                                <span class="font-bold"><i class="fa-solid fa-envelope mr-1"></i> TAC Webmail
+                                    Header</span>
+                                <div class="flex items-center space-x-3 text-xs">
+                                    <span>ict <i class="fa-solid fa-chevron-down text-[10px]"></i></span>
+                                    <span class="bg-blue-900/50 p-1 rounded"><i class="fa-solid fa-gear"></i></span>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-100 flex justify-end">
+                                <div class="bg-white border border-slate-300 rounded shadow-lg w-48 text-xs py-1 z-10">
+                                    <div class="px-3 py-1 hover:bg-slate-100 cursor-pointer">Personalize</div>
+                                    <div
+                                        class="px-3 py-1 bg-slate-200 font-bold text-tac-blue border-l-2 border-tac-blue cursor-pointer">
+                                        Security</div>
+                                    <div class="px-3 py-1 hover:bg-slate-100 cursor-pointer">Notifications</div>
+                                    <div class="px-3 py-1 hover:bg-slate-100 cursor-pointer">Compose</div>
+                                    <div class="px-3 py-1 hover:bg-slate-100 cursor-pointer">Autoresponder</div>
+                                    <div class="px-3 py-1 hover:bg-slate-100 cursor-pointer">Advanced Settings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yêu cầu chung -->
+                    <div
+                        class="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-800 flex items-start space-x-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-600 text-base mt-0.5"></i>
+                        <div>
+                            <strong class="font-bold">Yêu cầu chung quan trọng:</strong>
+                            <p class="mt-0.5">Tại mục <strong>Password Required</strong>, bạn bắt buộc phải nhập mật
+                                khẩu hiện tại vào ô <strong>Current Password</strong> để xác nhận quyền thực hiện bất kỳ
+                                thay đổi thông tin bảo mật nào.</p>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION 5.1: ĐỔI MẬT KHẨU -->
+                    <div id="sec-5-1" class="scroll-mt-20 mt-10 pt-6 border-t border-slate-200">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.1</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn Đổi mật khẩu (Change Your Password)
+                            </h3>
+                            <span
+                                class="inline-flex items-center text-[10px] font-semibold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+                                <i class="fa-solid fa-star text-amber-400 mr-1 text-[9px]"></i>
+                            </span>
+                        </div>
+
+                        <!-- Step cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">1</span>
+                                <span class="text-xs text-slate-700">Nhập mật khẩu hiện tại vào ô <strong>Current
+                                        Password</strong>.</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">2</span>
+                                <span class="text-xs text-slate-700">Nhập mật khẩu mới vào ô <strong>New
+                                        Password</strong> (Tối thiểu 12 ký tự gồm chữ hoa, chữ thường, số & ký tự đặc
+                                    biệt).</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">3</span>
+                                <span class="text-xs text-slate-700">Nhập lại mật khẩu mới vào ô <strong>Confirm New
+                                        Password</strong> để xác nhận.</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">4</span>
+                                <span class="text-xs text-slate-700">Cuối trang (hoặc đầu trang), bấm nút
+                                    <strong>Save</strong> để lưu lại.</span>
+                            </div>
+                        </div>
+
+                        <!-- UI MOCKUP: CHANGE PASSWORD -->
+                        <div class="bg-slate-100 p-4 rounded-xl border border-slate-300">
+                            <div class="bg-white p-4 rounded-lg shadow-sm space-y-4">
+                                <div class="flex justify-between items-center pb-2 border-b">
+                                    <span class="text-base font-bold text-tac-blue">Settings</span>
+                                    <div class="space-x-2">
+                                        <button
+                                            class="px-3 py-1 text-xs border border-slate-300 rounded text-slate-600"><i
+                                                class="fa-solid fa-arrow-left"></i> Return to Inbox</button>
+                                        <button
+                                            class="px-3 py-1 text-xs bg-tac-blue text-white rounded font-bold shadow">Save
+                                            (Bước 4)</button>
+                                    </div>
+                                </div>
+                                <div class="text-xs space-y-3">
+                                    <div class="grid grid-cols-3 gap-2 items-center">
+                                        <span class="font-bold text-slate-700">Password Required</span>
+                                        <div class="col-span-2 relative">
+                                            <input type="password" value="currentpass123" readonly
+                                                class="webmail-input text-xs">
+                                            <span class="absolute right-2 top-2 text-slate-400"><i
+                                                    class="fa-solid fa-eye-slash"></i></span>
+                                            <span class="text-[10px] text-red-500 font-semibold mt-0.5 block">▲ Bước 1:
+                                                Nhập mật khẩu hiện tại</span>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2 items-center pt-2 border-t">
+                                        <div>
+                                            <span class="font-bold text-slate-700 block">Change Your Password</span>
+                                            <span class="text-[10px] text-slate-400">Yêu cầu chữ hoa, chữ thường, số &
+                                                ký tự đặc biệt.</span>
+                                        </div>
+                                        <div class="col-span-2 space-y-2">
+                                            <div class="relative">
+                                                <input type="password" value="NewP@ssword2026" readonly
+                                                    class="webmail-input text-xs border-emerald-500 ring-1 ring-emerald-500">
+                                                <span class="text-[10px] text-emerald-600 font-semibold block">▲ Bước 2:
+                                                    Nhập mật khẩu mới</span>
+                                            </div>
+                                            <div class="relative">
+                                                <input type="password" value="NewP@ssword2026" readonly
+                                                    class="webmail-input text-xs border-emerald-500 ring-1 ring-emerald-500">
+                                                <span class="text-[10px] text-emerald-600 font-semibold block">▲ Bước 3:
+                                                    Xác nhận lại mật khẩu mới</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION 5.2: THÊM EMAIL DỰ PHÒNG -->
+                    <div id="sec-5-2" class="scroll-mt-20 mt-10 pt-6 border-t border-slate-200">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.2</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn Thêm email dự phòng (Password
+                                Recovery)</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-4">Email dự phòng giúp bạn nhận liên kết khôi phục mật khẩu
+                            trong trường hợp quên mật khẩu.</p>
+
+                        <!-- Step cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">1</span>
+                                <span class="text-xs text-slate-700">Nhập mật khẩu hiện tại vào ô <strong>Current
+                                        Password</strong>.</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">2</span>
+                                <span class="text-xs text-slate-700">Nhập địa chỉ email cá nhân/dự phòng vào ô
+                                    <strong>Recovery Email</strong>.</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">3</span>
+                                <span class="text-xs text-slate-700">Nhập lại địa chỉ email đó vào ô <strong>Confirm
+                                        Recovery Email</strong>.</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">4</span>
+                                <span class="text-xs text-slate-700">Bấm nút <strong>Save</strong> ở đầu hoặc cuối trang
+                                    để hoàn tất.</span>
+                            </div>
+                        </div>
+
+                        <!-- UI MOCKUP: RECOVERY EMAIL (FULL MDAEMON SETTINGS) -->
+                        <div class="bg-slate-100 p-4 md:p-6 rounded-xl border border-slate-300 shadow-inner">
+                            <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+
+                                <!-- Top MDaemon Settings Header Bar -->
+                                <div
+                                    class="bg-slate-50 px-4 py-3 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fa-solid fa-sliders text-tac-blue text-sm"></i>
+                                        <span class="text-base font-bold text-tac-blue tracking-tight">Settings</span>
+                                        <span class="text-xs text-slate-400">/ Security</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5">
+                                        <button
+                                            class="px-3 py-1.5 text-xs border border-slate-300 rounded text-slate-600 bg-white hover:bg-slate-50 transition">
+                                            <i class="fa-solid fa-arrow-left text-[10px] mr-1"></i> Return to Inbox
+                                        </button>
+
+                                        <!-- Save Button Highlight (Bước 4) -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="border-2 border-red-500 rounded p-0.5 bg-red-50/40">
+                                                <button
+                                                    class="px-3.5 py-1 text-xs bg-[#1f648b] text-white rounded font-bold shadow hover:bg-blue-800 transition">
+                                                    Save
+                                                </button>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xs font-mono flex items-center gap-1">
+                                                <i class="fa-solid fa-arrow-left text-[10px]"></i> Bước 4
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Settings Content Body -->
+                                <div class="p-4 md:p-6 text-xs divide-y divide-slate-100 space-y-4">
+
+                                    <!-- 1. Login History -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 pb-3">
+                                        <span class="font-bold text-slate-700">Login History</span>
+                                        <div class="md:col-span-2 text-slate-500 text-[11px]">
+                                            The last ten successful MDaemon Webmail logins for your account
+                                        </div>
+                                    </div>
+
+                                    <!-- 2. Password Required (Bước 1) -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-4 pb-3">
+                                        <div>
+                                            <span class="font-bold text-slate-700 block">Password Required</span>
+                                            <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+                                                You must confirm your current password in order to change your password
+                                                or recovery email address, or to make changes to Two Factor
+                                                Authentication.
+                                            </p>
+                                        </div>
+                                        <div class="md:col-span-2 space-y-1.5">
+                                            <label class="text-[11px] font-semibold text-slate-600 block">Current
+                                                Password</label>
+                                            <div class="flex items-center space-x-2">
+                                                <div
+                                                    class="relative flex-1 max-w-sm border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                    <input type="password" value="password123" readonly
+                                                        class="webmail-input text-xs border-none bg-transparent pr-8">
+                                                    <span class="absolute right-2.5 top-2.5 text-slate-400"><i
+                                                            class="fa-solid fa-eye-slash"></i></span>
+                                                </div>
+                                                <span
+                                                    class="text-red-600 font-extrabold text-xs font-mono flex items-center gap-1 flex-shrink-0">
+                                                    <i class="fa-solid fa-arrow-left text-[10px]"></i> Bước 1
+                                                </span>
+                                            </div>
+                                            <span class="text-[10px] text-red-500 font-semibold block">Nhập mật khẩu
+                                                đang sử dụng</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3. Change Your Password (Existing Section - Inactive Context) -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-4 pb-3 opacity-60">
+                                        <div>
+                                            <span class="font-bold text-slate-700 block">Change Your Password</span>
+                                            <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+                                                Enter your old password above. Then enter your new password below and
+                                                confirm it.
+                                            </p>
+                                        </div>
+                                        <div class="md:col-span-2 space-y-2">
+                                            <div class="max-w-sm">
+                                                <label class="text-[11px] text-slate-500 block mb-0.5">New
+                                                    Password</label>
+                                                <input type="password" value="••••••••••••" readonly
+                                                    class="webmail-input text-xs bg-slate-50 text-slate-400 cursor-not-allowed">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 4. Password Recovery (Core Section - Bước 2 & 3) -->
+                                    <div
+                                        class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-4 pb-2 bg-blue-50/40 -mx-4 md:-mx-6 px-4 md:px-6 py-4 rounded-lg border-y border-blue-100">
+                                        <div>
+                                            <span
+                                                class="font-bold text-tac-blue text-sm block flex items-center gap-1.5">
+                                                <i class="fa-solid fa-envelope-circle-check text-tac-blue"></i>
+                                                Password Recovery
+                                            </span>
+                                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                                                Specify the email address where you wish to receive your password reset
+                                                link in case you forget your password.
+                                            </p>
+                                        </div>
+                                        <div class="md:col-span-2 space-y-3">
+                                            <!-- Recovery Email (Bước 2) -->
+                                            <div>
+                                                <label
+                                                    class="text-[11px] font-semibold text-slate-700 block mb-1">Recovery
+                                                    Email</label>
+                                                <div class="flex items-center space-x-2">
+                                                    <div
+                                                        class="relative flex-1 max-w-sm border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                        <span class="absolute left-2.5 top-2.5 text-slate-400"><i
+                                                                class="fa-regular fa-envelope"></i></span>
+                                                        <input type="email" value="ict@tacorp.vn" readonly
+                                                            class="webmail-input pl-8 text-xs text-slate-800 font-medium border-none bg-transparent">
+                                                    </div>
+                                                    <span
+                                                        class="text-red-600 font-extrabold text-xs font-mono flex items-center gap-1 flex-shrink-0">
+                                                        <i class="fa-solid fa-arrow-left text-[10px]"></i> Bước 2
+                                                    </span>
+                                                </div>
+                                                <span class="text-[10px] text-slate-500 mt-0.5 block">Nhập địa chỉ email
+                                                    cá nhân / email dự phòng dùng để khôi phục</span>
+                                            </div>
+
+                                            <!-- Confirm Recovery Email (Bước 3) -->
+                                            <div>
+                                                <label
+                                                    class="text-[11px] font-semibold text-slate-700 block mb-1">Confirm
+                                                    Recovery Email</label>
+                                                <div class="flex items-center space-x-2">
+                                                    <div
+                                                        class="relative flex-1 max-w-sm border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                        <span class="absolute left-2.5 top-2.5 text-slate-400"><i
+                                                                class="fa-solid fa-check-double"></i></span>
+                                                        <input type="email" value="ict@tacorp.vn" readonly
+                                                            class="webmail-input pl-8 text-xs text-slate-800 font-medium border-none bg-transparent">
+                                                    </div>
+                                                    <span
+                                                        class="text-red-600 font-extrabold text-xs font-mono flex items-center gap-1 flex-shrink-0">
+                                                        <i class="fa-solid fa-arrow-left text-[10px]"></i> Bước 3
+                                                    </span>
+                                                </div>
+                                                <span class="text-[10px] text-slate-500 mt-0.5 block">Nhập lại chính xác
+                                                    địa chỉ email trên để xác nhận</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Bottom Action Bar (Bước 4) -->
+                                <div
+                                    class="bg-slate-50 px-4 py-3 border-t border-slate-200 flex justify-end items-center space-x-3">
+                                    <button
+                                        class="px-3.5 py-1.5 text-xs text-slate-600 hover:text-slate-900">Cancel</button>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="border-2 border-red-500 rounded p-0.5 bg-red-50/40">
+                                            <button
+                                                class="px-4 py-1.5 text-xs bg-[#1f648b] text-white rounded font-bold shadow hover:bg-blue-800 transition">
+                                                Save
+                                            </button>
+                                        </div>
+                                        <span
+                                            class="text-red-600 font-extrabold text-xs font-mono flex items-center gap-1">
+                                            <i class="fa-solid fa-arrow-left text-[10px]"></i> Bước 4
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <p class="text-[11px] text-slate-500 text-center mt-3 italic">
+                                Giao diện cài đặt Security trong MDaemon Webmail: hoàn thành đầy đủ cả 4 bước và bấm
+                                Save để lưu thay đổi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION 5.3: CÀI ĐẶT 2FA -->
+                    <div id="sec-5-3" class="scroll-mt-20 mt-10 pt-6 border-t border-slate-200">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.3</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn Cài đặt Xác thực 2 bước (Two Factor
+                                Authentication - 2FA)</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-4">
+                            Chức năng này giúp tăng cường bảo mật tối đa bằng cách yêu cầu mã xác minh 6 chữ số từ ứng
+                            dụng trên điện thoại mỗi khi đăng nhập.
+                        </p>
+
+                        <div
+                            class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-tac-blue mb-6 flex items-center space-x-2">
+                            <i class="fa-solid fa-mobile-screen text-base"></i>
+                            <span><strong>Chuẩn bị:</strong> Tải và cài đặt ứng dụng <strong>Google
+                                    Authenticator</strong> (hoặc ứng dụng tạo mã OTP tương thích) trên điện thoại di
+                                động từ App Store / Google Play Store.</span>
+                        </div>
+
+                        <!-- Detailed Steps List -->
+                        <div class="space-y-4 text-xs text-slate-700 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">1</span>
+                                <div>Nhập mật khẩu hiện tại vào ô <strong>Current Password</strong>.</div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">2</span>
+                                <div>Bấm nút <strong>Setup Two Factor Authentication</strong> ở phần mô tả phía dưới.
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">3</span>
+                                <div>Màn hình sẽ hiển thị mã <strong>QR Code</strong> hoặc <strong>Khóa bí mật (Secret
+                                        Key)</strong>.</div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">4</span>
+                                <div>Mở ứng dụng Google Authenticator trên điện thoại, chọn nút dấu cộng <strong
+                                        class="text-blue-600">(+)</strong> -> chọn <strong>Quét mã QR</strong> hoặc
+                                    <strong>Nhập khóa thiết lập</strong>.
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">5</span>
+                                <div>Nhập mã xác minh 6 chữ số sinh ra từ ứng dụng điện thoại vào ô <strong>Verification
+                                        Code</strong> và nhấn nút <strong>Verify Pairing</strong>.</div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="step-badge flex-shrink-0">6</span>
+                                <div>Bấm nút <strong>Save</strong> ở đầu trang để hoàn tất liên kết và lưu thiết lập.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRAPHICAL VISUAL MOCKUPS FOR 2FA -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <!-- MOBILE APP AUTHENTICATOR MOCKUP (CHUẨN GIAO DIỆN APP GOOGLE AUTHENTICATOR) -->
+                            <div
+                                class="bg-slate-100 p-4 md:p-5 rounded-2xl border border-slate-300 flex flex-col items-center">
+                                <span
+                                    class="text-xs font-bold text-slate-700 block mb-3 text-center flex items-center justify-center gap-1.5">
+                                    <i class="fa-brands fa-google text-blue-500"></i>
+                                    Giao diện ứng dụng Google Authenticator (Bước 4)
+                                </span>
+
+                                <!-- Phone Mockup Frame -->
+                                <div
+                                    class="w-64 sm:w-72 bg-white border-[6px] border-slate-800 rounded-[36px] p-3.5 shadow-2xl text-xs font-sans relative overflow-hidden">
+
+                                    <!-- Phone Top Speaker Notch & Status Bar -->
+                                    <div
+                                        class="flex justify-between items-center px-2 pt-0.5 pb-2 text-[10px] text-slate-400 font-medium">
+                                        <span>9:41</span>
+                                        <div class="w-16 h-2.5 bg-slate-800 rounded-full mx-auto"></div>
+                                        <div class="flex items-center space-x-1 text-[9px] text-slate-600">
+                                            <i class="fa-solid fa-signal"></i>
+                                            <i class="fa-solid fa-wifi"></i>
+                                            <i class="fa-solid fa-battery-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Google Authenticator App Header -->
+                                    <div class="flex justify-between items-center py-2 px-1 border-b border-slate-100">
+                                        <div class="flex items-center space-x-2">
+                                            <i class="fa-solid fa-bars text-slate-600 text-sm cursor-pointer"></i>
+                                            <span class="font-semibold text-slate-800 text-xs">Google
+                                                Authenticator</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <!-- Cloud Sync Icon -->
+                                            <span title="Cloud sync on" class="text-emerald-500 text-xs">
+                                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                            </span>
+                                            <!-- User Avatar -->
+                                            <div
+                                                class="w-6 h-6 rounded-full bg-blue-600 text-white font-bold text-[10px] flex items-center justify-center">
+                                                TAC
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search Bar in App -->
+                                    <div
+                                        class="my-2.5 bg-slate-100 rounded-full px-3 py-1.5 flex items-center space-x-2 text-slate-400 text-[11px]">
+                                        <i class="fa-solid fa-magnifying-glass text-[10px]"></i>
+                                        <span class="text-slate-400">Tìm kiếm...</span>
+                                    </div>
+
+                                    <!-- OTP Account List (Left Aligned as real Google Authenticator) -->
+                                    <div class="space-y-2.5 my-3">
+                                        <!-- Account Item matching PDF Page 4 -->
+                                        <div
+                                            class="p-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition shadow-sm text-left">
+                                            <!-- Account name left-aligned -->
+                                            <div class="text-[11px] font-medium text-slate-600 truncate mb-1">
+                                                tacorp.vn <span
+                                                    class="text-slate-400 font-normal">(ict@tacorp.vn)</span>
+                                            </div>
+
+                                            <!-- Code row with left alignment and countdown timer on right -->
+                                            <div class="flex items-center justify-between">
+                                                <!-- OTP with red highlight box matching PDF manual -->
+                                                <div class="flex items-center space-x-1.5">
+                                                    <div
+                                                        class="border-2 border-red-500 rounded px-2 py-0.5 bg-red-50/20">
+                                                        <span
+                                                            class="text-xl font-mono font-bold text-[#1a73e8] tracking-widest">
+                                                            581 559
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-[9px] text-red-600 font-bold font-sans">
+                                                        ← Verification code
+                                                    </span>
+                                                </div>
+
+                                                <!-- 30s Pie Timer Countdown Circle -->
+                                                <div class="relative w-5 h-5 flex-shrink-0"
+                                                    title="Thời gian hiệu lực 30s">
+                                                    <svg class="w-5 h-5 transform -rotate-90" viewBox="0 0 36 36">
+                                                        <path class="text-slate-200" stroke-width="3.5"
+                                                            stroke="currentColor" fill="none"
+                                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                                        <path class="text-[#1a73e8]" stroke-dasharray="75, 100"
+                                                            stroke-width="3.5" stroke-linecap="round"
+                                                            stroke="currentColor" fill="none"
+                                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Action: Floating Action Button + Popover Menu (Matching PDF step 4) -->
+                                    <div class="pt-3 pb-1 relative">
+                                        <!-- Action Sheet Popover -->
+                                        <div
+                                            class="mb-2 bg-slate-900 text-white text-[10px] rounded-xl p-2.5 shadow-xl space-y-1.5 text-left border border-slate-700">
+                                            <div
+                                                class="flex items-center space-x-2 text-slate-200 hover:text-white cursor-pointer py-0.5">
+                                                <i class="fa-solid fa-camera text-blue-400 text-xs w-4"></i>
+                                                <span>Quét mã QR</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center space-x-2 text-slate-200 hover:text-white cursor-pointer py-0.5 border-t border-slate-800 pt-1">
+                                                <i class="fa-regular fa-keyboard text-emerald-400 text-xs w-4"></i>
+                                                <span>Nhập khóa thiết lập</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Plus Floating Button -->
+                                        <div class="flex justify-end">
+                                            <button
+                                                class="w-9 h-9 rounded-2xl bg-[#1a73e8] text-white shadow-lg text-base flex items-center justify-center hover:bg-blue-600 transition">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Home indicator bar -->
+                                    <div class="w-24 h-1 bg-slate-400 rounded-full mx-auto mt-2"></div>
+                                </div>
+                            </div>
+                            <!-- WEB 2FA SETUP SCREEN -->
+                            <div class="bg-slate-100 p-4 rounded-xl border border-slate-300">
+                                <span class="text-xs font-bold text-slate-600 block mb-3 text-center">Giao diện Webmail
+                                    thiết lập 2FA</span>
+                                <div class="bg-white p-4 rounded-lg shadow-sm text-center space-y-3">
+                                    <p class="text-[11px] text-slate-500">Scan QR Code or enter Secret Key into
+                                        Authenticator app:</p>
+
+                                    <!-- QR Code Mockup -->
+                                    <div class="inline-block p-3 bg-white border border-slate-300 rounded-lg shadow-sm">
+                                        <div
+                                            class="w-32 h-32 bg-slate-900 rounded flex items-center justify-center text-white text-[10px] font-mono relative">
+                                            <!-- SVG QR pattern mockup -->
+                                            <svg viewBox="0 0 100 100" class="w-full h-full fill-white">
+                                                <rect x="10" y="10" width="25" height="25" />
+                                                <rect x="65" y="10" width="25" height="25" />
+                                                <rect x="10" y="65" width="25" height="25" />
+                                                <rect x="40" y="40" width="20" height="20" />
+                                                <rect x="70" y="70" width="15" height="15" />
+                                                <rect x="45" y="15" width="10" height="15" />
+                                                <rect x="15" y="45" width="15" height="10" />
+                                            </svg>
+                                            <div class="absolute inset-0 flex items-center justify-center">
+                                                <span
+                                                    class="bg-tac-red text-white text-[8px] px-1 font-bold rounded">TAC</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="bg-slate-100 p-1.5 rounded text-xs font-mono tracking-widest text-slate-800">
+                                        D5MW V56T C2FI AYZW
+                                    </div>
+
+                                    <!-- Bước 5: Verification Code Center Aligned -->
+                                    <div
+                                        class="pt-3 border-t text-center flex flex-col items-center justify-center space-y-2">
+                                        <label class="text-[11px] font-bold text-slate-700 block text-center">
+                                            Verification Code (Bước 5)
+                                        </label>
+                                        <div class="flex items-center justify-center space-x-2 w-full max-w-xs">
+                                            <div class="border-2 border-red-500 rounded p-0.5 bg-red-50/20">
+                                                <input type="text" value="581559" readonly
+                                                    class="webmail-input text-xs font-mono font-bold text-center tracking-widest w-28 border-none bg-transparent text-tac-blue">
+                                            </div>
+                                            <button
+                                                class="px-3.5 py-1.5 bg-tac-blue text-white rounded text-xs font-semibold shadow hover:bg-blue-800 transition">
+                                                Verify Pairing
+                                            </button>
+                                        </div>
+                                        <span
+                                            class="text-[10px] text-red-600 font-semibold flex items-center justify-center gap-1">
+                                            <i class="fa-solid fa-arrow-up text-[9px]"></i> Nhập mã 6 số từ ứng dụng để
+                                            xác thực
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION 5.4: QUÊN MẬT KHẨU -->
+                    <div id="sec-5-4" class="scroll-mt-20 mt-10 pt-6 border-t border-slate-200">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="px-2.5 py-1 bg-tac-blue text-white rounded text-xs font-bold">5.4</span>
+                            <h3 class="text-lg font-bold text-slate-800">Hướng dẫn lấy lại mật khẩu dùng email dự phòng
+                                (Forgot Password)</h3>
+                            <span
+                                class="inline-flex items-center text-[10px] font-semibold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+                                <i class="fa-solid fa-star text-amber-400 mr-1 text-[9px]"></i>
+                            </span>
+                        </div>
+
+                        <!-- RECOVERY PROCESS FLOW VISUAL (Mô phỏng đầy đủ theo tài liệu HDSD.01) -->
+                        <div class="mt-8 space-y-6">
+                            <!-- Lưới 2 cột cho các bước mô phỏng 1 - 4 -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                                <!-- ==================== HÌNH BƯỚC 1 ==================== -->
+                                <div
+                                    class="bg-slate-100 p-4 md:p-5 rounded-2xl border border-slate-300 flex flex-col items-center">
+                                    <div
+                                        class="w-full flex items-center justify-between mb-3 text-xs border-b border-slate-200 pb-2">
+                                        <span class="font-bold text-slate-700 flex items-center">
+                                            <span class="step-badge flex-shrink-0 mr-2 text-[10px]">1</span> Bước 1:
+                                            Nhấp "forgot your password?"
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Card Mockup Webmail Login -->
+                                    <div
+                                        class="w-full max-w-sm bg-white p-5 rounded-xl shadow-sm border border-slate-200 space-y-3">
+                                        <img src="../img/TA_Logo-removebg-preview.png"
+                                            onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                            alt="Logo" class="h-9 mx-auto mb-1 object-contain">
+
+                                        <div
+                                            class="flex justify-between items-center text-xs text-slate-400 border-b pb-1">
+                                            <span class="text-slate-700 text-sm font-semibold">Webmail Login</span>
+                                            <span
+                                                class="text-slate-400 hover:underline cursor-pointer text-xs">Help</span>
+                                        </div>
+
+                                        <div class="space-y-2.5 pt-1">
+                                            <div class="relative">
+                                                <span class="absolute left-3 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-user"></i></span>
+                                                <input type="text" placeholder="email address" readonly
+                                                    class="webmail-input pl-8 text-xs text-slate-500">
+                                            </div>
+                                            <div class="relative">
+                                                <span class="absolute left-3 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-lock"></i></span>
+                                                <input type="password" placeholder="password" readonly
+                                                    class="webmail-input pl-8 text-xs text-slate-500">
+                                                <span class="absolute right-3 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-eye"></i></span>
+                                            </div>
+
+                                            <!-- Highlight: forgot your password? -->
+                                            <div class="flex items-center justify-end pt-0.5">
+                                                <div
+                                                    class="inline-flex items-center border-2 border-red-500 rounded px-2 py-0.5 bg-red-50/60">
+                                                    <span
+                                                        class="text-xs text-blue-600 font-semibold cursor-pointer">forgot
+                                                        your password?</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-center pt-1 text-xs text-slate-600">
+                                                <input type="checkbox" id="rem1" readonly
+                                                    class="mr-2 rounded border-slate-300">
+                                                <label for="rem1" class="cursor-pointer">Remember Me</label>
+                                            </div>
+
+                                            <button
+                                                class="w-full bg-[#1f648b] text-white py-2 rounded text-xs font-semibold flex items-center justify-center space-x-1.5 shadow">
+                                                <span>Sign In</span>
+                                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                            </button>
+
+                                            <div class="pt-2 flex justify-between text-[11px] text-slate-500 border-t">
+                                                <span
+                                                    class="border rounded px-2 py-0.5 bg-slate-50 text-slate-600">English
+                                                    ▼</span>
+                                                <span
+                                                    class="border rounded px-2 py-0.5 bg-slate-50 text-slate-600">WorldClient
+                                                    ▼</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 text-center mt-3">Tại màn hình đăng nhập, nhấp
+                                        vào liên kết <strong class="text-red-500">"forgot your password?"</strong></p>
+                                </div>
+
+                                <!-- ==================== HÌNH BƯỚC 2 ==================== -->
+                                <div
+                                    class="bg-slate-100 p-4 md:p-5 rounded-2xl border border-slate-300 flex flex-col items-center">
+                                    <div
+                                        class="w-full flex items-center justify-between mb-3 text-xs border-b border-slate-200 pb-2">
+                                        <span class="font-bold text-slate-700 flex items-center">
+                                            <span class="step-badge flex-shrink-0 mr-2 text-[10px]">2</span> Bước 2:
+                                            Nhập email cần khôi phục & Submit
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Card Mockup Password Recovery Step 2 -->
+                                    <div
+                                        class="w-full max-w-sm bg-white p-5 rounded-xl shadow-sm border border-slate-200 space-y-3">
+                                        <img src="../img/TA_Logo-removebg-preview.png"
+                                            onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                            alt="Logo" class="h-9 mx-auto mb-1 object-contain">
+
+                                        <div
+                                            class="flex justify-between items-center text-xs text-slate-400 border-b pb-1">
+                                            <span class="text-slate-700 text-sm font-semibold">Password Recovery</span>
+                                            <span
+                                                class="text-slate-400 hover:underline cursor-pointer text-xs">Help</span>
+                                        </div>
+
+                                        <p class="text-[11px] text-slate-500">Please enter your email address below</p>
+
+                                        <!-- Input with red border and number 1 -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="relative flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <span class="absolute left-2.5 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-user"></i></span>
+                                                <input type="text" placeholder="email address" readonly
+                                                    class="webmail-input pl-8 text-xs text-slate-700 border-none bg-transparent">
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">1</span>
+                                        </div>
+
+                                        <!-- Submit Button with red border and number 2 -->
+                                        <div class="flex items-center space-x-2 pt-1">
+                                            <div class="flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <button
+                                                    class="w-full bg-[#1f648b] text-white py-2 rounded text-xs font-semibold flex items-center justify-center space-x-1.5 shadow">
+                                                    <span>Submit</span>
+                                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                                </button>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">2</span>
+                                        </div>
+
+                                        <!-- Cancel button -->
+                                        <div class="pt-0.5">
+                                            <button
+                                                class="w-full bg-[#1f648b] text-white py-1.5 rounded text-xs font-semibold flex items-center justify-center space-x-1">
+                                                <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                                                <span>Cancel</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="pt-2 text-[11px] text-slate-500 border-t">
+                                            <span class="border rounded px-2 py-0.5 bg-slate-50 text-slate-600">English
+                                                ▼</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 text-center mt-3">Nhập địa chỉ email công vụ
+                                        vào ô <strong class="text-red-500">[1]</strong> rồi bấm nút Submit <strong
+                                            class="text-red-500">[2]</strong>.</p>
+                                </div>
+
+                                <!-- ==================== HÌNH BƯỚC 3 ==================== -->
+                                <div
+                                    class="bg-slate-100 p-4 md:p-5 rounded-2xl border border-slate-300 flex flex-col items-center">
+                                    <div
+                                        class="w-full flex items-center justify-between mb-3 text-xs border-b border-slate-200 pb-2">
+                                        <span class="font-bold text-slate-700 flex items-center">
+                                            <span class="step-badge flex-shrink-0 mr-2 text-[10px]">3</span> Bước 3:
+                                            Nhập email dự phòng & Send Email
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Card Mockup Password Recovery Step 3 -->
+                                    <div
+                                        class="w-full max-w-sm bg-white p-5 rounded-xl shadow-sm border border-slate-200 space-y-3">
+                                        <img src="../img/TA_Logo-removebg-preview.png"
+                                            onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                            alt="Logo" class="h-9 mx-auto mb-1 object-contain">
+
+                                        <div
+                                            class="flex justify-between items-center text-xs text-slate-400 border-b pb-1">
+                                            <span class="text-slate-700 text-sm font-semibold">Password Recovery</span>
+                                            <span
+                                                class="text-slate-400 hover:underline cursor-pointer text-xs">Help</span>
+                                        </div>
+
+                                        <div>
+                                            <p class="text-[11px] text-slate-500">Please enter your recovery email below
+                                            </p>
+                                            <p class="text-xs font-mono text-slate-400 tracking-wider">ic*****@tacorp.vn
+                                            </p>
+                                        </div>
+
+                                        <!-- Input recovery email with red border and number 1 -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="relative flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <span class="absolute left-2.5 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-user"></i></span>
+                                                <input type="text" placeholder="recovery email" readonly
+                                                    class="webmail-input pl-8 text-xs text-slate-700 border-none bg-transparent">
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">1</span>
+                                        </div>
+
+                                        <!-- Send Email Button with red border and number 2 -->
+                                        <div class="flex items-center space-x-2 pt-1">
+                                            <div class="flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <button
+                                                    class="w-full bg-[#1f648b] text-white py-2 rounded text-xs font-semibold flex items-center justify-center space-x-1.5 shadow">
+                                                    <span>Send Email</span>
+                                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                                </button>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">2</span>
+                                        </div>
+
+                                        <!-- Cancel button -->
+                                        <div class="pt-0.5">
+                                            <button
+                                                class="w-full bg-[#1f648b] text-white py-1.5 rounded text-xs font-semibold flex items-center justify-center space-x-1">
+                                                <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                                                <span>Cancel</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="pt-2 text-[11px] text-slate-500 border-t">
+                                            <span class="border rounded px-2 py-0.5 bg-slate-50 text-slate-600">English
+                                                ▼</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 text-center mt-3">Nhập email dự phòng đã đăng
+                                        ký vào ô <strong class="text-red-500">[1]</strong> rồi bấm Send Email <strong
+                                            class="text-red-500">[2]</strong>.</p>
+                                </div>
+
+                                <!-- ==================== HÌNH BƯỚC 4 ==================== -->
+                                <div
+                                    class="bg-slate-100 p-4 md:p-5 rounded-2xl border border-slate-300 flex flex-col justify-between">
+                                    <div>
+                                        <div
+                                            class="w-full flex items-center justify-between mb-3 text-xs border-b border-slate-200 pb-2">
+                                            <span class="font-bold text-slate-700 flex items-center">
+                                                <span class="step-badge flex-shrink-0 mr-2 text-[10px]">4</span> Bước 4:
+                                                Nhận đường dẫn khôi phục mật khẩu email
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Mockup Email received in Inbox/Spam -->
+                                        <div
+                                            class="w-full bg-white p-4 rounded-xl shadow-sm border border-slate-200 space-y-3">
+                                            <div class="flex items-center justify-between border-b pb-2.5">
+                                                <div class="flex items-center space-x-2.5">
+                                                    <div
+                                                        class="w-7 h-7 rounded-full bg-blue-100 text-tac-blue flex items-center justify-center font-bold text-xs">
+                                                        MD
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-bold text-slate-800 text-xs">MDaemon</div>
+                                                        <div class="text-[10px] text-slate-400">to me <i
+                                                                class="fa-solid fa-caret-down text-[8px]"></i></div>
+                                                    </div>
+                                                </div>
+                                                <span
+                                                    class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-200 font-semibold">
+                                                    Hộp thư đến / Spam
+                                                </span>
+                                            </div>
+
+                                            <p class="text-slate-600 text-xs">Please open the link below to reset your
+                                                MDaemon password:</p>
+
+                                            <div
+                                                class="bg-blue-50/80 p-3 rounded-lg border border-blue-200 text-[11px] font-mono text-tac-blue break-all leading-relaxed hover:bg-blue-100/70 transition cursor-pointer">
+                                                <i
+                                                    class="fa-solid fa-link mr-1"></i>https://tacorp.vn:777/WorldClient.dll?View=PasswordRecovery&User=ict%40tacorp.vn&RecoveryToken=VKRVRDJIU1NXTEFPWESUN0NGR1Z5UEtIIIULLIE8YNEC=
+                                            </div>
+
+                                            <div
+                                                class="p-2.5 bg-amber-50 rounded border border-amber-200 text-[11px] text-amber-800 flex items-start space-x-2">
+                                                <i
+                                                    class="fa-solid fa-circle-exclamation text-amber-600 mt-0.5 flex-shrink-0"></i>
+                                                <span>Nếu không thấy thư trong <strong>Inbox</strong>, vui lòng kiểm tra
+                                                    thêm thư mục <strong>Spam (Thư rác)</strong>.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 text-center mt-3">Mở email từ MDaemon và nhấp
+                                        vào đường dẫn dài để vào màn hình đổi mật khẩu.</p>
+                                </div>
+
+                            </div>
+
+                            <!-- ==================== HÌNH BƯỚC 5 & 6 ==================== -->
+                            <div
+                                class="bg-slate-100 p-4 md:p-6 rounded-2xl border border-slate-300 flex flex-col items-center">
+                                <div
+                                    class="w-full flex items-center justify-between mb-3 text-xs border-b border-slate-200 pb-2">
+                                    <span class="font-bold text-slate-700 flex items-center">
+                                        <span class="step-badge flex-shrink-0 mr-2 text-[10px]">5-6</span> Bước 5 & 6:
+                                        Nhập mật khẩu mới & Đổi mật khẩu
+                                    </span>
+
+                                </div>
+
+                                <!-- Card Mockup Password Recovery Step 5 & 6 -->
+                                <div
+                                    class="w-full max-w-md bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200 space-y-3.5">
+                                    <img src="../img/TA_Logo-removebg-preview.png"
+                                        onerror="this.onerror=null; this.src='/img/TA_Logo-removebg-preview.png';"
+                                        alt="Logo" class="h-9 mx-auto mb-1 object-contain">
+
+                                    <div class="flex justify-between items-center text-xs text-slate-400 border-b pb-1">
+                                        <span class="text-slate-700 text-sm font-semibold">Password Recovery</span>
+                                        <span class="text-slate-400 hover:underline cursor-pointer text-xs">Help</span>
+                                    </div>
+
+                                    <div
+                                        class="text-[11px] text-amber-700 bg-amber-50/70 p-2 rounded border border-amber-100">
+                                        If you need assistance please contact your email administrator.
+                                    </div>
+
+                                    <p class="text-xs font-semibold text-slate-700">Change password for <span
+                                            class="text-tac-blue">ict@tacorp.vn</span></p>
+
+                                    <div class="space-y-3 pt-1">
+                                        <!-- Input new password with red border and number 1 -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="relative flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <span class="absolute left-2.5 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-key"></i></span>
+                                                <input type="password" placeholder="new password" readonly
+                                                    class="webmail-input pl-8 pr-8 text-xs text-slate-700 border-none bg-transparent">
+                                                <span
+                                                    class="absolute right-2.5 top-2.5 text-slate-400 text-xs cursor-pointer"><i
+                                                        class="fa-solid fa-eye"></i></span>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">1</span>
+                                        </div>
+
+                                        <!-- Input confirm password with red border and number 2 -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="relative flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <span class="absolute left-2.5 top-2.5 text-slate-400 text-xs"><i
+                                                        class="fa-solid fa-key"></i></span>
+                                                <input type="password" placeholder="confirm password" readonly
+                                                    class="webmail-input pl-8 pr-8 text-xs text-slate-700 border-none bg-transparent">
+                                                <span
+                                                    class="absolute right-2.5 top-2.5 text-slate-400 text-xs cursor-pointer"><i
+                                                        class="fa-solid fa-eye"></i></span>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">2</span>
+                                        </div>
+
+                                        <!-- Change Password Button with red border and number 3 -->
+                                        <div class="flex items-center space-x-2 pt-1">
+                                            <div class="flex-1 border-2 border-red-500 rounded p-0.5">
+                                                <button
+                                                    class="w-full bg-[#1f648b] text-white py-2 rounded text-xs font-semibold flex items-center justify-center space-x-1.5 shadow">
+                                                    <span>Change Password</span>
+                                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                                </button>
+                                            </div>
+                                            <span
+                                                class="text-red-600 font-extrabold text-xl font-mono flex-shrink-0">3</span>
+                                        </div>
+
+                                        <!-- Cancel button -->
+                                        <div class="pt-0.5">
+                                            <button
+                                                class="w-full bg-[#1f648b] text-white py-1.5 rounded text-xs font-semibold flex items-center justify-center space-x-1">
+                                                <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                                                <span>Cancel</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="pt-2 text-[11px] text-slate-500 border-t">
+                                            <span class="border rounded px-2 py-0.5 bg-slate-50 text-slate-600">English
+                                                ▼</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 text-center mt-3">Nhập mật khẩu mới <strong
+                                        class="text-red-500">[1]</strong>, xác nhận lại mật khẩu <strong
+                                        class="text-red-500">[2]</strong> và nhấn nút Change Password <strong
+                                        class="text-red-500">[3]</strong> để hoàn tất.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION 6: NGUYÊN TẮC BẢO MẬT -->
+            <section id="sec-6" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">6</span>
+                        <h2 class="text-xl font-bold text-slate-800">Khuyến nghị bảo mật</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Card 1 -->
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex items-center space-x-2 text-tac-blue font-bold text-sm mb-2">
+                                <i class="fa-solid fa-key"></i>
+                                <span>Quy tắc đặt Mật khẩu An toàn</span>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Mật khẩu có độ dài tối thiểu từ <strong>12 ký tự</strong> trở lên.</li>
+                                <li>Kết hợp đầy đủ chữ hoa, chữ thường, chữ số và ký tự đặc biệt (ví dụ: @, #, $, !).
+                                </li>
+                                <li>Tuyệt đối không dùng thông tin dễ đoán như ngày sinh, tên cá nhân, 123456...</li>
+                                <li>Thực hiện đổi mật khẩu định kỳ tối thiểu 6 tháng/lần.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex items-center space-x-2 text-red-600 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-shield-cat"></i>
+                                <span>Cảnh báo Phishing & Email Lừa đảo</span>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Bộ phận IT <strong>không bao giờ</strong> gửi email yêu cầu cung cấp mật khẩu cá
+                                    nhân.</li>
+                                <li>Cảnh giác với các đường link lạ hoặc các tệp đính kèm dạng .exe, .scr, .zip từ người
+                                    gửi lạ.</li>
+                                <li>Kiểm tra kỹ địa chỉ email người gửi (đặc biệt các tên miền giả mạo gần giống).</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex items-center space-x-2 text-amber-600 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-mobile-retro"></i>
+                                <span>Lưu ý khi Cài đặt 2FA trên Điện thoại</span>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Nên bật tính năng <strong>Cloud Backup</strong> trong Google Authenticator để tránh
+                                    mất mã khi đổi điện thoại.</li>
+                                <li>Nếu mất điện thoại hoặc không lấy được mã OTP, liên hệ ngay IT để được hỗ trợ reset
+                                    2FA.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex items-center space-x-2 text-indigo-600 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <span>Cấu hình Outlook / Mobile Mail</span>
+                            </div>
+                            <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Incoming Server (IMAP): <code>tacorp.vn</code> - Port: 993 (SSL)</li>
+                                <li>Outgoing Server (SMTP): <code>tacorp.vn</code> - Port: 465 / 587 (TLS)</li>
+                                <li>Sử dụng mật khẩu chính thức của tài khoản email để xác thực.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7: PHÊ DUYỆT VÀ LIÊN HỆ -->
+            <section id="sec-7" class="scroll-mt-20 mb-10">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center font-bold text-sm">7</span>
+                        <h2 class="text-xl font-bold text-slate-800">Thông tin phê duyệt & Nơi nhận</h2>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                        <!-- Nơi nhận -->
+                        <div class="space-y-1">
+                            <strong class="text-slate-800 block text-sm mb-2">Nơi nhận:</strong>
+                            <p>• Toàn thể BQL & NV (để thực hiện);</p>
+                            <p>• Bộ phận IT (để phối hợp & hỗ trợ);</p>
+                            <p>• Lưu: VT, IT.</p>
+                        </div>
+
+                        <!-- Chữ ký & Ngày ban hành -->
+                        <div class="text-right flex flex-col justify-between space-y-4">
+                            <div>
+                                <p class="italic">TP. Hồ Chí Minh, ngày 30 tháng 10 năm 2026</p>
+                                <strong class="text-slate-900 block mt-1">GIÁM ĐỐC</strong>
+                            </div>
+                            <div class="pt-8">
+                                <span class="font-bold text-slate-900 text-sm block tracking-wider uppercase">Huỳnh Kim
+                                    Thanh Danh</span>
+                                <span class="text-[10px] text-slate-400">Đã ký duyệt ban hành</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-400">
+                <p>© 2026 Công ty TNHH Cổ phần Đầu tư Công nghệ Thiên Ân (TAC). All rights reserved</p>
+                <p class="mt-1">Tài liệu lưu hành nội bộ</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn"
+        class="fixed bottom-6 right-6 z-50 w-11 h-11 md:w-12 md:h-12 bg-tac-blue text-white rounded-full shadow-lg hover:bg-blue-800 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tac-blue transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none flex items-center justify-center group active:scale-95"
+        aria-label="Về đầu trang" title="Về đầu trang">
+        <svg class="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-0.5" fill="none"
+            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
